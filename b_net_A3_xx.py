@@ -1,6 +1,7 @@
 import sys
 import json
 
+
 class BayesianNetwork(object):
     def __init__(self, structure, values, queries):
         # you may add more attributes if you need
@@ -20,18 +21,22 @@ class BayesianNetwork(object):
         # network built in the construct() method.
         self.answer = []  # your code to find the answer
         # for the given example:
-        # self.answer = [{"index": 1, "answer": 0.01}, {"index": 2, "answer": 0.71}]
+        # self.answer =
+        #   [{"index": 1, "answer": 0.01}, {"index": 2, "answer": 0.71}]
         # the format of the answer returned SHOULD be as shown above.
         return self.answer
 
-    # You may add more classes/functions if you think is useful. However, ensure
-    # all the classes/functions are in this file ONLY and used within the
-    # BayesianNetwork class.
+    # You may add more classes/functions if you think is useful. However,
+    # ensure all the classes/functions are in this file ONLY and used within
+    # the BayesianNetwork class.
+
 
 def main():
     # STRICTLY do NOT modify the code in the main function here
     if len(sys.argv) != 4:
-        print ("\nUsage: python b_net_A3_xx.py structure.json values.json queries.json \n")
+        print("""
+Usage: python b_net_A3_xx.py structure.json values.json queries.json
+            """)
         raise ValueError("Wrong number of arguments!")
 
     structure_filename = sys.argv[1]
@@ -53,7 +58,6 @@ def main():
     b_network = BayesianNetwork(structure, values, queries)
     b_network.construct()
     answers = b_network.infer()
-
 
 
 if __name__ == "__main__":
