@@ -1,10 +1,11 @@
 import sys
 import json
+import itertools
+from collections import defaultdict
 
 
 class BayesianNetwork(object):
     def __init__(self, structure, values, queries):
-        # you may add more attributes if you need
         self.variables = structure["variables"]
         self.dependencies = structure["dependencies"]
         self.conditional_probabilities = values["conditional_probabilities"]
@@ -13,18 +14,82 @@ class BayesianNetwork(object):
         self.answer = []
 
     def construct(self):
-        # TODO: Your code here to construct the Bayesian network
-        pass
+        forward = defaultdict(list)
+        for dest, sources in self.dependencies.items():
+            for source in sources:
+                forward[source].append(dest)
+        backward = dict((k, v[:]) for k, v in self.dependencies.items())
+        lst = []
+        s = set(self.variables.keys()) - set(self.dependencies.keys())
+        while s:
+            n = s.pop()
+            lst.append(n)
+            for m in forward[n]:
+                backward[m].remove(n)
+                if not backward[m]:
+                    s.add(m)
+        self.toposorted = lst[::-1]
 
     def infer(self):
-        # TODO: Your code here to answer the queries given using the Bayesian
-        # network built in the construct() method.
         self.answer = []  # your code to find the answer
-        # for the given example:
-        # self.answer =
-        #   [{"index": 1, "answer": 0.01}, {"index": 2, "answer": 0.71}]
-        # the format of the answer returned SHOULD be as shown above.
+        for query in self.queries:
+            self.answer.append({
+                "index":
+                query["index"],
+                "answer":
+                self.enumeration_ask(query["tofind"], query["given"])
+            })
         return self.answer
+
+    def enumeration_ask(self, tofind, given):
+        tofind_vars = list(tofind.keys())
+        assignments = list(
+            itertools.product(*(self.variables[var] for var in tofind_vars)))
+        q = []
+        for assignment in assignments:
+            all_assignments = dict(zip(tofind_vars, assignment))
+            all_assignments.update(given)
+            q.append(self.enumerate_all(self.toposorted[:], all_assignments))
+
+        alpha = sum(q)
+        q = [x / alpha for x in q]
+
+        correct_assignment = tuple(tofind[var] for var in tofind_vars)
+
+        for (assignment, result) in zip(assignments, q):
+            if assignment == correct_assignment:
+                return result
+
+    # assignments: Dict[string, string]
+    def enumerate_all(self, vars, assignments):
+        """
+        This function MUTATES vars
+        """
+        if not vars:
+            return 1.0
+        y = vars.pop()
+        if y in assignments:
+            return self.cond_probability(y, assignments) * self.enumerate_all(
+                vars[:], assignments)
+        else:
+
+            def f(val):
+                new_assignments = assignments.copy()
+                new_assignments[y] = val
+                return self.cond_probability(
+                    y, new_assignments) * self.enumerate_all(
+                        vars[:], new_assignments)
+
+            return sum(f(val) for val in self.variables[y])
+
+    def cond_probability(self, var, assignments):
+        if var in self.prior_probabilities:
+            return self.prior_probabilities[var][assignments[var]]
+        parents = self.dependencies[var]
+        for x in self.conditional_probabilities[var]:
+            if all(x[p] == assignments[p]
+                   for p in parents) and x["own_value"] == assignments[var]:
+                return x["probability"]
 
     # You may add more classes/functions if you think is useful. However,
     # ensure all the classes/functions are in this file ONLY and used within
@@ -58,6 +123,8 @@ Usage: python b_net_A3_xx.py structure.json values.json queries.json
     b_network = BayesianNetwork(structure, values, queries)
     b_network.construct()
     answers = b_network.infer()
+
+    print(answers)
 
 
 if __name__ == "__main__":
