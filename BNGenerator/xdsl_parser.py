@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 
+import json
+import sys
+import os
 import xml.etree.ElementTree as ET
 from xml.etree.ElementTree import Element
 from typing import List
@@ -90,3 +93,20 @@ class BayesianNetwork:
             "prior_probabilities": prior_probabilities,
             "conditional_probabilities": conditional_probabilities
         }
+
+
+def main():
+    if len(sys.argv) != 2:
+        print("Usage: {} graph.xdsl".format(sys.argv[0]))
+        sys.exit(1)
+    bn = BayesianNetwork(sys.argv[1])
+    filename = os.path.splitext(sys.argv[1])[0]
+    with open(filename + '.structure.json',
+              'w') as structure, open(filename + '.values.json',
+                                      'w') as values:
+        json.dump(bn.structure(), structure)
+        json.dump(bn.values(), values)
+
+
+if __name__ == "__main__":
+    main()
