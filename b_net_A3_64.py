@@ -30,6 +30,16 @@ class BayesianNetwork(object):
                     s.add(m)
         self.toposorted = lst[::-1]
 
+        memo = {}
+        for var, values in self.conditional_probabilities.items():
+            d = {}
+            parents = self.dependencies[var]
+            for v in values:
+                d[tuple(v[p]
+                        for p in (parents + ['own_value']))] = v['probability']
+            memo[var] = d
+        self.memo = memo
+
     def infer(self):
         self.answer = []  # your code to find the answer
         for query in self.queries:
@@ -86,10 +96,8 @@ class BayesianNetwork(object):
         if var in self.prior_probabilities:
             return self.prior_probabilities[var][assignments[var]]
         parents = self.dependencies[var]
-        for x in self.conditional_probabilities[var]:
-            if all(x[p] == assignments[p]
-                   for p in parents) and x["own_value"] == assignments[var]:
-                return x["probability"]
+        key = tuple(assignments[p] for p in (parents + [var]))
+        return self.memo[var][key]
 
     # You may add more classes/functions if you think is useful. However,
     # ensure all the classes/functions are in this file ONLY and used within
