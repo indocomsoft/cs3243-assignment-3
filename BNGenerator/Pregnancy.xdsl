@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<smile version="1.0" id="pregnancy" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="Sex">
+			<state id="Male" />
+			<state id="Female" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Pregnancy">
+			<state id="True" />
+			<state id="False" />
+			<parents>Sex</parents>
+			<probabilities>0 1 0.05 0.95</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 2.3.3520.1 1d480d954d39d00" name="Pregnancy" faultnameformat="nodestate">
+			<comment>This is a simple network demonstrating propagation of evidence. Observing that a person is a male implies that the person is not pregnant.  Observing that the person is pregnant implies that the person is female.\nReference:\nBayesFusion, LLC</comment>
+			<node id="Sex">
+				<name>Sex</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="12" />
+				<position>57 30 147 70</position>
+				<barchart active="true" width="161" height="64" />
+			</node>
+			<node id="Pregnancy">
+				<name>Pregnancy</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="12" />
+				<position>57 135 147 176</position>
+				<barchart active="true" width="161" height="64" />
+			</node>
+			<textbox>
+				<caption>This is a simple network demonstrating propagation of evidence. Observing that a person is a male implies that the person is not pregnant.  Observing that the person is pregnant implies that the person is female.\nReference:\nBayesFusion, LLC</caption>
+				<font color="000080" name="Arial" size="12" bold="true" />
+				<position>233 19 538 171</position>
+			</textbox>
+		</genie>
+	</extensions>
+</smile>

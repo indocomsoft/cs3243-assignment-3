@@ -1,0 +1,1 @@
+{"variables": {"MetastCancer": ["present", "absent"], "BrainTumor": ["present", "absent"], "IncrSerCal": ["present", "absent"], "Coma": ["present", "absent"], "SevHeadaches": ["present", "absent"]}, "dependencies": {"BrainTumor": ["MetastCancer"], "IncrSerCal": ["MetastCancer"], "Coma": ["IncrSerCal", "BrainTumor"], "SevHeadaches": ["BrainTumor"]}}

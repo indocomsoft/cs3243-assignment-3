@@ -1,0 +1,1 @@
+{"prior_probabilities": {"Sex": {"Male": 0.5, "Female": 0.5}}, "conditional_probabilities": {"Pregnancy": [{"Sex": "Male", "own_value": "True", "probability": 0.0}, {"Sex": "Male", "own_value": "False", "probability": 1.0}, {"Sex": "Female", "own_value": "True", "probability": 0.05}, {"Sex": "Female", "own_value": "False", "probability": 0.95}]}}

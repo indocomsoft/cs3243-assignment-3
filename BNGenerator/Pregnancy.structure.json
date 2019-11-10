@@ -1,0 +1,1 @@
+{"variables": {"Sex": ["Male", "Female"], "Pregnancy": ["True", "False"]}, "dependencies": {"Pregnancy": ["Sex"]}}

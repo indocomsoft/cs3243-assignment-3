@@ -1,0 +1,1 @@
+{"prior_probabilities": {"FuelFilters": {"Defective": 0.005, "Correct": 0.995}, "FuelDelivSys": {"Defective": 0.01, "Correct": 0.99}}, "conditional_probabilities": {}}

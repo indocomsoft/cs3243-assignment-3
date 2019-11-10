@@ -1,0 +1,1 @@
+{"variables": {"Animal": ["Monkey", "Penguin", "Platypus", "Robin", "Turtle"], "Environment": ["Air", "Land", "Water"]}, "dependencies": {"Environment": ["Animal"]}}

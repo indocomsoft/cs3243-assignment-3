@@ -1,0 +1,1 @@
+{"variables": {"Disease": ["absent", "present"], "Test": ["negative", "positive"]}, "dependencies": {"Test": ["Disease"]}}

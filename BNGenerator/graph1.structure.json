@@ -1,0 +1,1 @@
+{"variables": {"Earthquake": ["T", "F"], "Burglary": ["T", "F"], "Alarm": ["T", "F"], "John": ["T", "F"], "Mary": ["T", "F"]}, "dependencies": {"Alarm": ["Burglary", "Earthquake"], "John": ["Alarm"], "Mary": ["Alarm"]}}

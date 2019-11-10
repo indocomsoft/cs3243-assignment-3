@@ -1,0 +1,2818 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<smile version="1.0" id="andes" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="GOAL_2">
+			<state id="false" label="F3" />
+			<state id="true" label="F4" />
+			<probabilities>0.02 0.98</probabilities>
+		</cpt>
+		<cpt id="SNode_3">
+			<state id="false" label="F5" />
+			<state id="true" label="F6" />
+			<probabilities>0.02 0.98</probabilities>
+		</cpt>
+		<cpt id="SNode_4">
+			<state id="false" label="F7" />
+			<state id="true" label="F8" />
+			<probabilities>0.02 0.98</probabilities>
+		</cpt>
+		<cpt id="SNode_5">
+			<state id="false" label="F9" />
+			<state id="true" label="F10" />
+			<probabilities>0.02 0.98</probabilities>
+		</cpt>
+		<cpt id="SNode_6">
+			<state id="false" label="F11" />
+			<state id="true" label="F12" />
+			<probabilities>0.02 0.98</probabilities>
+		</cpt>
+		<cpt id="SNode_7">
+			<state id="false" label="F13" />
+			<state id="true" label="F14" />
+			<probabilities>0.02 0.98</probabilities>
+		</cpt>
+		<cpt id="DISPLACEM0">
+			<state id="false" label="F15" />
+			<state id="true" label="F16" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="RApp1">
+			<state id="false" label="F17" />
+			<state id="true" label="F18" />
+			<parents>DISPLACEM0 SNode_3</parents>
+			<probabilities>1 0 1 0 1 0 0.0001 0.9999</probabilities>
+		</cpt>
+		<cpt id="GIVEN_1">
+			<state id="false" label="F19" />
+			<state id="true" label="F20" />
+			<probabilities>0.02 0.98</probabilities>
+		</cpt>
+		<cpt id="RApp2">
+			<state id="false" label="F21" />
+			<state id="true" label="F22" />
+			<parents>GIVEN_1</parents>
+			<probabilities>1 0 0.0001 0.9999</probabilities>
+		</cpt>
+		<cpt id="SNode_8">
+			<state id="false" label="F23" />
+			<state id="true" label="F24" />
+			<parents>RApp1 RApp2</parents>
+			<probabilities>0.8 0.2 0 1 0 1 0 1</probabilities>
+		</cpt>
+		<cpt id="SNode_9">
+			<state id="false" label="F25" />
+			<state id="true" label="F26" />
+			<probabilities>0.02 0.98</probabilities>
+		</cpt>
+		<cpt id="SNode_10">
+			<state id="false" label="F27" />
+			<state id="true" label="F28" />
+			<probabilities>0.02 0.98</probabilities>
+		</cpt>
+		<cpt id="SNode_11">
+			<state id="false" label="F29" />
+			<state id="true" label="F30" />
+			<probabilities>0.02 0.98</probabilities>
+		</cpt>
+		<cpt id="SNode_12">
+			<state id="false" label="F31" />
+			<state id="true" label="F32" />
+			<probabilities>0.02 0.98</probabilities>
+		</cpt>
+		<cpt id="SNode_13">
+			<state id="false" label="F33" />
+			<state id="true" label="F34" />
+			<probabilities>0.02 0.98</probabilities>
+		</cpt>
+		<cpt id="SNode_14">
+			<state id="false" label="F35" />
+			<state id="true" label="F36" />
+			<probabilities>0.02 0.98</probabilities>
+		</cpt>
+		<cpt id="SNode_15">
+			<state id="false" label="F37" />
+			<state id="true" label="F38" />
+			<probabilities>0.02 0.98</probabilities>
+		</cpt>
+		<cpt id="SNode_16">
+			<state id="false" label="F39" />
+			<state id="true" label="F40" />
+			<probabilities>0.02 0.98</probabilities>
+		</cpt>
+		<cpt id="SNode_17">
+			<state id="false" label="F41" />
+			<state id="true" label="F42" />
+			<probabilities>0.02 0.98</probabilities>
+		</cpt>
+		<cpt id="SNode_19">
+			<state id="false" label="F45" />
+			<state id="true" label="F46" />
+			<probabilities>0.02 0.98</probabilities>
+		</cpt>
+		<cpt id="NEED1">
+			<state id="false" label="F47" />
+			<state id="true" label="F48" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="SNode_20">
+			<state id="false" label="F49" />
+			<state id="true" label="F50" />
+			<parents>SNode_16 NEED1</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="GRAV2">
+			<state id="false" label="F51" />
+			<state id="true" label="F52" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="SNode_21">
+			<state id="false" label="F53" />
+			<state id="true" label="F54" />
+			<parents>SNode_20 GRAV2</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="VALUE3">
+			<state id="false" label="F55" />
+			<state id="true" label="F56" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="SNode_24">
+			<state id="false" label="F57" />
+			<state id="true" label="F58" />
+			<parents>SNode_21 VALUE3</parents>
+			<probabilities>0.9 0.1 0.9 0.1 0.9 0.1 9.000000000000001e-05 0.99991</probabilities>
+		</cpt>
+		<cpt id="SLIDING4">
+			<state id="false" label="F59" />
+			<state id="true" label="F60" />
+			<probabilities>0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="SNode_25">
+			<state id="false" label="F61" />
+			<state id="true" label="F62" />
+			<parents>SNode_15 SLIDING4</parents>
+			<probabilities>0.9 0.1 0.9 0.1 0.9 0.1 9.000000000000001e-05 0.99991</probabilities>
+		</cpt>
+		<cpt id="CONSTANT5">
+			<state id="false" label="F63" />
+			<state id="true" label="F64" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="SNode_26">
+			<state id="false" label="F65" />
+			<state id="true" label="F66" />
+			<parents>SNode_11 CONSTANT5</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="KNOWN6">
+			<state id="false" label="F67" />
+			<state id="true" label="F68" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="VELOCITY7">
+			<state id="false" label="F69" />
+			<state id="true" label="F70" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="SNode_47">
+			<state id="false" label="F71" />
+			<state id="true" label="F72" />
+			<parents>SNode_3 VELOCITY7</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="RApp3">
+			<state id="false" label="F73" />
+			<state id="true" label="F74" />
+			<parents>KNOWN6 SNode_26 SNode_47</parents>
+			<probabilities>1 0 1 0 1 0 1 0 1 0 1 0 1 0 0.0001 0.9999</probabilities>
+		</cpt>
+		<cpt id="KNOWN8">
+			<state id="false" label="F75" />
+			<state id="true" label="F76" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="RApp4">
+			<state id="false" label="F77" />
+			<state id="true" label="F78" />
+			<parents>KNOWN8 SNode_11</parents>
+			<probabilities>1 0 1 0 1 0 0.0001 0.9999</probabilities>
+		</cpt>
+		<cpt id="SNode_27">
+			<state id="false" label="F79" />
+			<state id="true" label="F80" />
+			<parents>RApp3 RApp4</parents>
+			<probabilities>0.8 0.2 0 1 0 1 0 1</probabilities>
+		</cpt>
+		<cpt id="COMPO16">
+			<state id="false" label="F81" />
+			<state id="true" label="F82" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="GOAL_48">
+			<state id="false" label="F83" />
+			<state id="true" label="F84" />
+			<parents>GOAL_2 COMPO16</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="TRY12">
+			<state id="false" label="F85" />
+			<state id="true" label="F86" />
+			<probabilities>0.7 0.3</probabilities>
+		</cpt>
+		<cpt id="TRY11">
+			<state id="false" label="F87" />
+			<state id="true" label="F88" />
+			<parents>TRY12</parents>
+			<probabilities>0.8 0.2 0 1</probabilities>
+		</cpt>
+		<cpt id="GOAL_49">
+			<state id="false" label="F89" />
+			<state id="true" label="F90" />
+			<parents>SNode_5 SNode_6 GOAL_48 TRY11</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="CHOOSE19">
+			<state id="false" label="F91" />
+			<state id="true" label="F92" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="GOAL_50">
+			<state id="false" label="F93" />
+			<state id="true" label="F94" />
+			<parents>GOAL_49 CHOOSE19</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="SYSTEM18">
+			<state id="false" label="F95" />
+			<state id="true" label="F96" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="SNode_51">
+			<state id="false" label="F97" />
+			<state id="true" label="F98" />
+			<parents>SNode_17 GOAL_50 SYSTEM18</parents>
+			<probabilities>0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 9.000000000000001e-05 0.99991</probabilities>
+		</cpt>
+		<cpt id="KINEMATI17">
+			<state id="false" label="F99" />
+			<state id="true" label="F100" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="SNode_52">
+			<state id="false" label="F101" />
+			<state id="true" label="F102" />
+			<parents>SNode_51 KINEMATI17</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="IDENTIFY10">
+			<state id="false" label="F103" />
+			<state id="true" label="F104" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="GOAL_53">
+			<state id="false" label="F105" />
+			<state id="true" label="F106" />
+			<parents>GOAL_49 SNode_52 IDENTIFY10</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="IDENTIFY9">
+			<state id="false" label="F107" />
+			<state id="true" label="F108" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="SNode_28">
+			<state id="false" label="F109" />
+			<state id="true" label="F110" />
+			<parents>SNode_27 GOAL_53 IDENTIFY9</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="TRY13">
+			<state id="false" label="F111" />
+			<state id="true" label="F112" />
+			<parents>TRY12</parents>
+			<probabilities>0.8 0.2 0 1</probabilities>
+		</cpt>
+		<cpt id="TRY14">
+			<state id="false" label="F113" />
+			<state id="true" label="F114" />
+			<parents>TRY12</parents>
+			<probabilities>0.9 0.1 0 1</probabilities>
+		</cpt>
+		<cpt id="TRY15">
+			<state id="false" label="F115" />
+			<state id="true" label="F116" />
+			<parents>TRY12</parents>
+			<probabilities>0.9 0.1 0 1</probabilities>
+		</cpt>
+		<cpt id="VAR20">
+			<state id="false" label="F117" />
+			<state id="true" label="F118" />
+			<probabilities>0.3 0.7</probabilities>
+		</cpt>
+		<cpt id="SNode_29">
+			<state id="false" label="F119" />
+			<state id="true" label="F120" />
+			<parents>SNode_28 VAR20</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="SNode_31">
+			<state id="false" label="F121" />
+			<state id="true" label="F122" />
+			<parents>SNode_29 VALUE3</parents>
+			<probabilities>0.9 0.1 0.9 0.1 0.9 0.1 9.000000000000001e-05 0.99991</probabilities>
+		</cpt>
+		<cpt id="GIVEN21">
+			<state id="false" label="F123" />
+			<state id="true" label="F124" />
+			<probabilities>0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="SNode_33">
+			<state id="false" label="F125" />
+			<state id="true" label="F126" />
+			<parents>SNode_10 GIVEN21</parents>
+			<probabilities>0.9 0.1 0.9 0.1 0.9 0.1 9.000000000000001e-05 0.99991</probabilities>
+		</cpt>
+		<cpt id="SNode_34">
+			<state id="false" label="F127" />
+			<state id="true" label="F128" />
+			<parents>SNode_10 CONSTANT5</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="VECTOR27">
+			<state id="false" label="F129" />
+			<state id="true" label="F130" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="APPLY32">
+			<state id="false" label="F131" />
+			<state id="true" label="F132" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="GOAL_56">
+			<state id="false" label="F133" />
+			<state id="true" label="F134" />
+			<parents>GOAL_49 SNode_52 APPLY32</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="CHOOSE35">
+			<state id="false" label="F135" />
+			<state id="true" label="F136" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="GOAL_57">
+			<state id="false" label="F137" />
+			<state id="true" label="F138" />
+			<parents>GOAL_56 CHOOSE35</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="MAXIMIZE34">
+			<state id="false" label="F139" />
+			<state id="true" label="F140" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="SNode_59">
+			<state id="false" label="F141" />
+			<state id="true" label="F142" />
+			<parents>SNode_7 GOAL_57 MAXIMIZE34</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="AXIS33">
+			<state id="false" label="F143" />
+			<state id="true" label="F144" />
+			<probabilities>0.2 0.8</probabilities>
+		</cpt>
+		<cpt id="SNode_60">
+			<state id="false" label="F145" />
+			<state id="true" label="F146" />
+			<parents>SNode_59 AXIS33</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="WRITE31">
+			<state id="false" label="F147" />
+			<state id="true" label="F148" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="GOAL_61">
+			<state id="false" label="F149" />
+			<state id="true" label="F150" />
+			<parents>GOAL_56 SNode_60 WRITE31</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="WRITE30">
+			<state id="false" label="F151" />
+			<state id="true" label="F152" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="GOAL_62">
+			<state id="false" label="F153" />
+			<state id="true" label="F154" />
+			<parents>GOAL_61 WRITE30</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="RESOLVE37">
+			<state id="false" label="F155" />
+			<state id="true" label="F156" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="GOAL_63">
+			<state id="false" label="F157" />
+			<state id="true" label="F158" />
+			<parents>SNode_28 GOAL_62 RESOLVE37</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="NEED36">
+			<state id="false" label="F159" />
+			<state id="true" label="F160" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="SNode_64">
+			<state id="false" label="F161" />
+			<state id="true" label="F162" />
+			<parents>GOAL_63 NEED36</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="SNode_41">
+			<state id="false" label="F163" />
+			<state id="true" label="F164" />
+			<parents>SNode_9 CONSTANT5</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="SNode_42">
+			<state id="false" label="F165" />
+			<state id="true" label="F166" />
+			<parents>SNode_8 SNode_41 KNOWN6</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="IDENTIFY39">
+			<state id="false" label="F167" />
+			<state id="true" label="F168" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="SNode_43">
+			<state id="false" label="F169" />
+			<state id="true" label="F170" />
+			<parents>SNode_42 GOAL_53 IDENTIFY39</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="RESOLVE38">
+			<state id="false" label="F171" />
+			<state id="true" label="F172" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="GOAL_66">
+			<state id="false" label="F173" />
+			<state id="true" label="F174" />
+			<parents>SNode_43 GOAL_62 RESOLVE38</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="SNode_67">
+			<state id="false" label="F175" />
+			<state id="true" label="F176" />
+			<parents>GOAL_66 NEED36</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="IDENTIFY41">
+			<state id="false" label="F177" />
+			<state id="true" label="F178" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="SNode_54">
+			<state id="false" label="F179" />
+			<state id="true" label="F180" />
+			<parents>GOAL_53 IDENTIFY41</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="RESOLVE40">
+			<state id="false" label="F181" />
+			<state id="true" label="F182" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="GOAL_69">
+			<state id="false" label="F183" />
+			<state id="true" label="F184" />
+			<parents>SNode_54 GOAL_62 RESOLVE40</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="SNode_70">
+			<state id="false" label="F185" />
+			<state id="true" label="F186" />
+			<parents>GOAL_69 NEED36</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="IDENTIFY43">
+			<state id="false" label="F187" />
+			<state id="true" label="F188" />
+			<probabilities>0.6 0.4</probabilities>
+		</cpt>
+		<cpt id="SNode_55">
+			<state id="false" label="F189" />
+			<state id="true" label="F190" />
+			<parents>SNode_34 GOAL_53 IDENTIFY43</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="RESOLVE42">
+			<state id="false" label="F191" />
+			<state id="true" label="F192" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="GOAL_72">
+			<state id="false" label="F193" />
+			<state id="true" label="F194" />
+			<parents>SNode_55 GOAL_62 RESOLVE42</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="SNode_73">
+			<state id="false" label="F195" />
+			<state id="true" label="F196" />
+			<parents>GOAL_72 NEED36</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="KINE29">
+			<state id="false" label="F197" />
+			<state id="true" label="F198" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="SNode_74">
+			<state id="false" label="F199" />
+			<state id="true" label="F200" />
+			<parents>GOAL_62 SNode_64 SNode_67 SNode_70 SNode_73 KINE29</parents>
+			<probabilities>0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 9.000000000000001e-05 0.99991</probabilities>
+		</cpt>
+		<cpt id="VECTOR44">
+			<state id="false" label="F201" />
+			<state id="true" label="F202" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="SNode_75">
+			<state id="false" label="F203" />
+			<state id="true" label="F204" />
+			<parents>SNode_4 GOAL_72 SNode_73 VECTOR44</parents>
+			<probabilities>0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 9.000000000000001e-05 0.99991</probabilities>
+		</cpt>
+		<cpt id="EQUATION28">
+			<state id="false" label="F205" />
+			<state id="true" label="F206" />
+			<probabilities>0.6 0.4</probabilities>
+		</cpt>
+		<cpt id="GOAL_79">
+			<state id="false" label="F207" />
+			<state id="true" label="F208" />
+			<parents>SNode_74 SNode_75 EQUATION28</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="RApp5">
+			<state id="false" label="F209" />
+			<state id="true" label="F210" />
+			<parents>VECTOR27 GOAL_79</parents>
+			<probabilities>1 0 1 0 1 0 0.0001 0.9999</probabilities>
+		</cpt>
+		<cpt id="GOAL_80">
+			<state id="false" label="F211" />
+			<state id="true" label="F212" />
+			<parents>SNode_75 EQUATION28</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="RApp6">
+			<state id="false" label="F213" />
+			<state id="true" label="F214" />
+			<parents>COMPO16 GOAL_80</parents>
+			<probabilities>1 0 1 0 1 0 0.0001 0.9999</probabilities>
+		</cpt>
+		<cpt id="GOAL_81">
+			<state id="false" label="F215" />
+			<state id="true" label="F216" />
+			<parents>RApp5 RApp6</parents>
+			<probabilities>0.8 0.2 0 1 0 1 0 1</probabilities>
+		</cpt>
+		<cpt id="TRY25">
+			<state id="false" label="F217" />
+			<state id="true" label="F218" />
+			<probabilities>0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="TRY24">
+			<state id="false" label="F219" />
+			<state id="true" label="F220" />
+			<parents>TRY25</parents>
+			<probabilities>0.95 0.05 0 1</probabilities>
+		</cpt>
+		<cpt id="GOAL_83">
+			<state id="false" label="F221" />
+			<state id="true" label="F222" />
+			<parents>GOAL_81 TRY24</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="CHOOSE47">
+			<state id="false" label="F223" />
+			<state id="true" label="F224" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="GOAL_84">
+			<state id="false" label="F225" />
+			<state id="true" label="F226" />
+			<parents>GOAL_83 CHOOSE47</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="SYSTEM46">
+			<state id="false" label="F227" />
+			<state id="true" label="F228" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="SNode_86">
+			<state id="false" label="F229" />
+			<state id="true" label="F230" />
+			<parents>GOAL_84 SYSTEM46</parents>
+			<probabilities>0.9 0.1 0.9 0.1 0.9 0.1 9.000000000000001e-05 0.99991</probabilities>
+		</cpt>
+		<cpt id="NEWTONS45">
+			<state id="false" label="F231" />
+			<state id="true" label="F232" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="SNode_156">
+			<state id="false" label="F233" />
+			<state id="true" label="F234" />
+			<parents>SNode_86 NEWTONS45</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="DEFINE23">
+			<state id="false" label="F235" />
+			<state id="true" label="F236" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="GOAL_98">
+			<state id="false" label="F237" />
+			<state id="true" label="F238" />
+			<parents>GOAL_83 SNode_156 DEFINE23</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="IDENTIFY22">
+			<state id="false" label="F239" />
+			<state id="true" label="F240" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="SNode_37">
+			<state id="false" label="F241" />
+			<state id="true" label="F242" />
+			<parents>GOAL_98 IDENTIFY22</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="TRY26">
+			<state id="false" label="F243" />
+			<state id="true" label="F244" />
+			<parents>TRY25</parents>
+			<probabilities>0.9 0.1 0 1</probabilities>
+		</cpt>
+		<cpt id="SNode_38">
+			<state id="false" label="F245" />
+			<state id="true" label="F246" />
+			<parents>SNode_37 VAR20</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="SNode_40">
+			<state id="false" label="F247" />
+			<state id="true" label="F248" />
+			<parents>SNode_38 VALUE3</parents>
+			<probabilities>0.9 0.1 0.9 0.1 0.9 0.1 9.000000000000001e-05 0.99991</probabilities>
+		</cpt>
+		<cpt id="SNode_44">
+			<state id="false" label="F249" />
+			<state id="true" label="F250" />
+			<parents>SNode_43 VAR20</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="SNode_46">
+			<state id="false" label="F251" />
+			<state id="true" label="F252" />
+			<parents>SNode_44 VALUE3</parents>
+			<probabilities>0.9 0.1 0.9 0.1 0.9 0.1 9.000000000000001e-05 0.99991</probabilities>
+		</cpt>
+		<cpt id="NULL48">
+			<state id="false" label="F253" />
+			<state id="true" label="F254" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="SNode_65">
+			<state id="false" label="F255" />
+			<state id="true" label="F256" />
+			<parents>SNode_29 GOAL_63 SNode_64 NULL48</parents>
+			<probabilities>0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 9.000000000000001e-05 0.99991</probabilities>
+		</cpt>
+		<cpt id="SNode_68">
+			<state id="false" label="F257" />
+			<state id="true" label="F258" />
+			<parents>GOAL_66 SNode_67 VECTOR44</parents>
+			<probabilities>0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 9.000000000000001e-05 0.99991</probabilities>
+		</cpt>
+		<cpt id="SNode_71">
+			<state id="false" label="F259" />
+			<state id="true" label="F260" />
+			<parents>GOAL_69 SNode_70 VECTOR44</parents>
+			<probabilities>0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 9.000000000000001e-05 0.99991</probabilities>
+		</cpt>
+		<cpt id="FIND49">
+			<state id="false" label="F261" />
+			<state id="true" label="F262" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="GOAL_87">
+			<state id="false" label="F263" />
+			<state id="true" label="F264" />
+			<parents>GOAL_83 SNode_156 FIND49</parents>
+			<probabilities>0.7 0.3 0.7 0.3 0.7 0.3 0.7 0.3 0.7 0.3 0.7 0.3 0.7 0.3 6.999999999999999e-05 0.99993</probabilities>
+		</cpt>
+		<cpt id="NORMAL50">
+			<state id="false" label="F265" />
+			<state id="true" label="F266" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="SNode_88">
+			<state id="false" label="F267" />
+			<state id="true" label="F268" />
+			<parents>SNode_25 GOAL_87 NORMAL50</parents>
+			<probabilities>0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 9.000000000000001e-05 0.99991</probabilities>
+		</cpt>
+		<cpt id="STRAT_90">
+			<state id="SNode_92_1" label="F269" />
+			<state id="SNode_91_2" label="F270" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="NORMAL52">
+			<state id="false" label="F271" />
+			<state id="true" label="F272" />
+			<probabilities>0.646 0.354</probabilities>
+		</cpt>
+		<cpt id="INCLINE51">
+			<state id="false" label="F273" />
+			<state id="true" label="F274" />
+			<parents>NORMAL52</parents>
+			<probabilities>1 0 0 1</probabilities>
+		</cpt>
+		<cpt id="SNode_91">
+			<state id="false" label="F275" />
+			<state id="true" label="F276" />
+			<parents>SNode_88 SNode_12 SNode_13 STRAT_90 INCLINE51</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="HORIZ53">
+			<state id="false" label="F277" />
+			<state id="true" label="F278" />
+			<parents>NORMAL52</parents>
+			<probabilities>0.8 0.2 0 1</probabilities>
+		</cpt>
+		<cpt id="BUGGY54">
+			<state id="false" label="F279" />
+			<state id="true" label="F280" />
+			<parents>NORMAL52</parents>
+			<probabilities>0.2 0.8 1 0</probabilities>
+		</cpt>
+		<cpt id="SNode_92">
+			<state id="false" label="F281" />
+			<state id="true" label="F282" />
+			<parents>SNode_12 STRAT_90 BUGGY54</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992 0.8 0.2 0.8 0.2</probabilities>
+		</cpt>
+		<cpt id="IDENTIFY55">
+			<state id="false" label="F283" />
+			<state id="true" label="F284" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="SNode_93">
+			<state id="false" label="F285" />
+			<state id="true" label="F286" />
+			<parents>GOAL_87 SNode_88 IDENTIFY55</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="WEIGHT56">
+			<state id="false" label="F287" />
+			<state id="true" label="F288" />
+			<probabilities>0.3 0.7</probabilities>
+		</cpt>
+		<cpt id="SNode_94">
+			<state id="false" label="F289" />
+			<state id="true" label="F290" />
+			<parents>SNode_16 SNode_33 GOAL_87 WEIGHT56</parents>
+			<probabilities>0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 9.000000000000001e-05 0.99991</probabilities>
+		</cpt>
+		<cpt id="WEIGHT57">
+			<state id="false" label="F291" />
+			<state id="true" label="F292" />
+			<probabilities>0.3 0.7</probabilities>
+		</cpt>
+		<cpt id="SNode_95">
+			<state id="false" label="F293" />
+			<state id="true" label="F294" />
+			<parents>SNode_94 WEIGHT57</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="SNode_97">
+			<state id="false" label="F295" />
+			<state id="true" label="F296" />
+			<parents>GOAL_87 SNode_94 IDENTIFY55</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="FIND58">
+			<state id="false" label="F297" />
+			<state id="true" label="F298" />
+			<probabilities>0.7 0.3</probabilities>
+		</cpt>
+		<cpt id="GOAL_99">
+			<state id="false" label="F299" />
+			<state id="true" label="F300" />
+			<parents>GOAL_98 FIND58</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="IDENTIFY59">
+			<state id="false" label="F301" />
+			<state id="true" label="F302" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="SNode_100">
+			<state id="false" label="F303" />
+			<state id="true" label="F304" />
+			<parents>GOAL_98 IDENTIFY59</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="FORCE60">
+			<state id="false" label="F305" />
+			<state id="true" label="F306" />
+			<probabilities>0.2 0.8</probabilities>
+		</cpt>
+		<cpt id="SNode_102">
+			<state id="false" label="F307" />
+			<state id="true" label="F308" />
+			<parents>GOAL_87 SNode_88 SNode_94 FORCE60</parents>
+			<probabilities>0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 9.000000000000001e-05 0.99991</probabilities>
+		</cpt>
+		<cpt id="APPLY61">
+			<state id="false" label="F309" />
+			<state id="true" label="F310" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="GOAL_103">
+			<state id="false" label="F311" />
+			<state id="true" label="F312" />
+			<parents>GOAL_83 SNode_102 APPLY61</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="CHOOSE62">
+			<state id="false" label="F313" />
+			<state id="true" label="F314" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="GOAL_104">
+			<state id="false" label="F315" />
+			<state id="true" label="F316" />
+			<parents>GOAL_103 CHOOSE62</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="SNode_106">
+			<state id="false" label="F317" />
+			<state id="true" label="F318" />
+			<parents>GOAL_104 MAXIMIZE34</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="SNode_152">
+			<state id="false" label="F319" />
+			<state id="true" label="F320" />
+			<parents>SNode_106 AXIS33</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="WRITE63">
+			<state id="false" label="F321" />
+			<state id="true" label="F322" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="GOAL_107">
+			<state id="false" label="F323" />
+			<state id="true" label="F324" />
+			<parents>GOAL_103 SNode_152 WRITE63</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="WRITE64">
+			<state id="false" label="F325" />
+			<state id="true" label="F326" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="GOAL_108">
+			<state id="false" label="F327" />
+			<state id="true" label="F328" />
+			<parents>GOAL_107 WRITE64</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="GOAL_109">
+			<state id="false" label="F329" />
+			<state id="true" label="F330" />
+			<parents>GOAL_107 WRITE64</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="GOAL65">
+			<state id="false" label="F331" />
+			<state id="true" label="F332" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="GOAL_110">
+			<state id="false" label="F333" />
+			<state id="true" label="F334" />
+			<parents>GOAL_109 GOAL65</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="GOAL66">
+			<state id="false" label="F335" />
+			<state id="true" label="F336" />
+			<probabilities>0.6 0.4</probabilities>
+		</cpt>
+		<cpt id="GOAL_111">
+			<state id="false" label="F337" />
+			<state id="true" label="F338" />
+			<parents>GOAL_109 GOAL66</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="NEED67">
+			<state id="false" label="F339" />
+			<state id="true" label="F340" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="RApp7">
+			<state id="false" label="F341" />
+			<state id="true" label="F342" />
+			<parents>NEED67 GOAL_109</parents>
+			<probabilities>1 0 1 0 1 0 0.0001 0.9999</probabilities>
+		</cpt>
+		<cpt id="RApp8">
+			<state id="false" label="F343" />
+			<state id="true" label="F344" />
+			<parents>NEED36 GOAL_111</parents>
+			<probabilities>1 0 1 0 1 0 0.0001 0.9999</probabilities>
+		</cpt>
+		<cpt id="SNode_112">
+			<state id="false" label="F345" />
+			<state id="true" label="F346" />
+			<parents>RApp7 RApp8</parents>
+			<probabilities>0.8 0.2 0 1 0 1 0 1</probabilities>
+		</cpt>
+		<cpt id="GOAL68">
+			<state id="false" label="F347" />
+			<state id="true" label="F348" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="GOAL_113">
+			<state id="false" label="F349" />
+			<state id="true" label="F350" />
+			<parents>GOAL_110 GOAL68</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="GOAL_114">
+			<state id="false" label="F351" />
+			<state id="true" label="F352" />
+			<parents>GOAL_110 GOAL68</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="SNode_115">
+			<state id="false" label="F353" />
+			<state id="true" label="F354" />
+			<parents>GOAL_114 NEED36</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="VECTOR69">
+			<state id="false" label="F355" />
+			<state id="true" label="F356" />
+			<probabilities>0.7 0.3</probabilities>
+		</cpt>
+		<cpt id="SNode_116">
+			<state id="false" label="F357" />
+			<state id="true" label="F358" />
+			<parents>SNode_95 SNode_97 GOAL_114 SNode_115 VECTOR69</parents>
+			<probabilities>0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 9.000000000000001e-05 0.99991</probabilities>
+		</cpt>
+		<cpt id="SNode_117">
+			<state id="false" label="F359" />
+			<state id="true" label="F360" />
+			<parents>GOAL_113 NEED36</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="VECTOR70">
+			<state id="false" label="F361" />
+			<state id="true" label="F362" />
+			<probabilities>0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="SNode_118">
+			<state id="false" label="F363" />
+			<state id="true" label="F364" />
+			<parents>SNode_91 GOAL_113 VECTOR70</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="EQUAL71">
+			<state id="false" label="F365" />
+			<state id="true" label="F366" />
+			<probabilities>0.4 0.6</probabilities>
+		</cpt>
+		<cpt id="SNode_119">
+			<state id="false" label="F367" />
+			<state id="true" label="F368" />
+			<parents>SNode_93 SNode_117 SNode_118 EQUAL71</parents>
+			<probabilities>0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 9.000000000000001e-05 0.99991</probabilities>
+		</cpt>
+		<cpt id="SNode_120">
+			<state id="false" label="F369" />
+			<state id="true" label="F370" />
+			<parents>SNode_92 SNode_93 GOAL_113 SNode_117 VECTOR69</parents>
+			<probabilities>0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 9.000000000000001e-05 0.99991</probabilities>
+		</cpt>
+		<cpt id="GOAL72">
+			<state id="false" label="F371" />
+			<state id="true" label="F372" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="GOAL_121">
+			<state id="false" label="F373" />
+			<state id="true" label="F374" />
+			<parents>GOAL_109 GOAL72</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="SNode_122">
+			<state id="false" label="F375" />
+			<state id="true" label="F376" />
+			<parents>GOAL_121 NEED36</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="VECTOR73">
+			<state id="false" label="F377" />
+			<state id="true" label="F378" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="SNode_123">
+			<state id="false" label="F379" />
+			<state id="true" label="F380" />
+			<parents>SNode_4 SNode_100 GOAL_121 SNode_122 VECTOR73</parents>
+			<probabilities>0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 9.000000000000001e-05 0.99991</probabilities>
+		</cpt>
+		<cpt id="NEWTONS74">
+			<state id="false" label="F381" />
+			<state id="true" label="F382" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="SNode_124">
+			<state id="false" label="F383" />
+			<state id="true" label="F384" />
+			<parents>SNode_37 GOAL_109 SNode_112 SNode_122 NEWTONS74</parents>
+			<probabilities>0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 9.000000000000001e-05 0.99991</probabilities>
+		</cpt>
+		<cpt id="SUM75">
+			<state id="false" label="F385" />
+			<state id="true" label="F386" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="SNode_125">
+			<state id="false" label="F387" />
+			<state id="true" label="F388" />
+			<parents>GOAL_109 SNode_112 SUM75</parents>
+			<probabilities>0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 9.000000000000001e-05 0.99991</probabilities>
+		</cpt>
+		<cpt id="GOAL_126">
+			<state id="false" label="F389" />
+			<state id="true" label="F390" />
+			<parents>GOAL_108 GOAL65</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="GOAL_127">
+			<state id="false" label="F391" />
+			<state id="true" label="F392" />
+			<parents>GOAL_108 GOAL66</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="RApp9">
+			<state id="false" label="F393" />
+			<state id="true" label="F394" />
+			<parents>NEED67 GOAL_108</parents>
+			<probabilities>1 0 1 0 1 0 0.0001 0.9999</probabilities>
+		</cpt>
+		<cpt id="RApp10">
+			<state id="false" label="F395" />
+			<state id="true" label="F396" />
+			<parents>NEED36 GOAL_127</parents>
+			<probabilities>1 0 1 0 1 0 0.0001 0.9999</probabilities>
+		</cpt>
+		<cpt id="SNode_128">
+			<state id="false" label="F397" />
+			<state id="true" label="F398" />
+			<parents>RApp9 RApp10</parents>
+			<probabilities>0.8 0.2 0 1 0 1 0 1</probabilities>
+		</cpt>
+		<cpt id="GOAL_129">
+			<state id="false" label="F399" />
+			<state id="true" label="F400" />
+			<parents>GOAL_126 GOAL68</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="GOAL_130">
+			<state id="false" label="F401" />
+			<state id="true" label="F402" />
+			<parents>GOAL_126 GOAL68</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="SNode_131">
+			<state id="false" label="F403" />
+			<state id="true" label="F404" />
+			<parents>GOAL_130 NEED36</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="SNode_132">
+			<state id="false" label="F405" />
+			<state id="true" label="F406" />
+			<parents>SNode_95 SNode_97 GOAL_130 SNode_131 VECTOR69</parents>
+			<probabilities>0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 9.000000000000001e-05 0.99991</probabilities>
+		</cpt>
+		<cpt id="SNode_133">
+			<state id="false" label="F407" />
+			<state id="true" label="F408" />
+			<parents>GOAL_129 NEED36</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="SNode_134">
+			<state id="false" label="F409" />
+			<state id="true" label="F410" />
+			<parents>SNode_91 SNode_93 GOAL_129 SNode_133 VECTOR73</parents>
+			<probabilities>0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 9.000000000000001e-05 0.99991</probabilities>
+		</cpt>
+		<cpt id="SNode_135">
+			<state id="false" label="F411" />
+			<state id="true" label="F412" />
+			<parents>SNode_92 SNode_93 GOAL_129 SNode_133 VECTOR69</parents>
+			<probabilities>0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 9.000000000000001e-05 0.99991</probabilities>
+		</cpt>
+		<cpt id="SNode_154">
+			<state id="false" label="F413" />
+			<state id="true" label="F414" />
+			<parents>GOAL_121 NEED36</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="SNode_136">
+			<state id="false" label="F415" />
+			<state id="true" label="F416" />
+			<parents>SNode_37 GOAL_108 SNode_128 SNode_154 NEWTONS74</parents>
+			<probabilities>0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 9.000000000000001e-05 0.99991</probabilities>
+		</cpt>
+		<cpt id="SNode_137">
+			<state id="false" label="F417" />
+			<state id="true" label="F418" />
+			<parents>GOAL_108 SNode_128 SUM75</parents>
+			<probabilities>0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 9.000000000000001e-05 0.99991</probabilities>
+		</cpt>
+		<cpt id="GOAL_142">
+			<state id="false" label="F419" />
+			<state id="true" label="F420" />
+			<parents>SNode_116 SNode_125 EQUATION28</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="GOAL_143">
+			<state id="false" label="F421" />
+			<state id="true" label="F422" />
+			<parents>SNode_116 SNode_132 EQUATION28</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="GOAL_146">
+			<state id="false" label="F423" />
+			<state id="true" label="F424" />
+			<parents>SNode_132 SNode_137 EQUATION28</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="RApp11">
+			<state id="false" label="F425" />
+			<state id="true" label="F426" />
+			<parents>VECTOR27 GOAL_142</parents>
+			<probabilities>1 0 1 0 1 0 0.0001 0.9999</probabilities>
+		</cpt>
+		<cpt id="RApp12">
+			<state id="false" label="F427" />
+			<state id="true" label="F428" />
+			<parents>COMPO16 GOAL_143</parents>
+			<probabilities>1 0 1 0 1 0 0.0001 0.9999</probabilities>
+		</cpt>
+		<cpt id="RApp13">
+			<state id="false" label="F429" />
+			<state id="true" label="F430" />
+			<parents>VECTOR27 GOAL_146</parents>
+			<probabilities>1 0 1 0 1 0 0.0001 0.9999</probabilities>
+		</cpt>
+		<cpt id="GOAL_147">
+			<state id="false" label="F431" />
+			<state id="true" label="F432" />
+			<parents>RApp11 RApp12 RApp13</parents>
+			<probabilities>0.8 0.2 0 1 0 1 0 1 0 1 0 1 0 1 0 1</probabilities>
+		</cpt>
+		<cpt id="TRY76">
+			<state id="false" label="F433" />
+			<state id="true" label="F434" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="GOAL_149">
+			<state id="false" label="F435" />
+			<state id="true" label="F436" />
+			<parents>GOAL_147 TRY76</parents>
+			<probabilities>0.7 0.3 0.7 0.3 0.7 0.3 6.999999999999999e-05 0.99993</probabilities>
+		</cpt>
+		<cpt id="APPLY77">
+			<state id="false" label="F437" />
+			<state id="true" label="F438" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="GOAL_150">
+			<state id="false" label="F439" />
+			<state id="true" label="F440" />
+			<parents>SNode_20 SNode_37 GOAL_149 APPLY77</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="GRAV78">
+			<state id="false" label="F441" />
+			<state id="true" label="F442" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="SNode_151">
+			<state id="false" label="F443" />
+			<state id="true" label="F444" />
+			<parents>GOAL_150 GRAV78</parents>
+			<probabilities>0.9 0.1 0.9 0.1 0.9 0.1 9.000000000000001e-05 0.99991</probabilities>
+		</cpt>
+		<cpt id="GOAL_153">
+			<state id="false" label="F445" />
+			<state id="true" label="F446" />
+			<parents>GOAL_108 GOAL72</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.8 0.2 8.000000000000001e-05 0.99992</probabilities>
+		</cpt>
+		<cpt id="SNode_155">
+			<state id="false" label="F447" />
+			<state id="true" label="F448" />
+			<parents>SNode_4 SNode_100 GOAL_153 SNode_154 VECTOR44</parents>
+			<probabilities>0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 9.000000000000001e-05 0.99991</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 2.2.2626.2 1d3af2fc8bc8c80" name="Andes" faultnameformat="nodestate">
+			<comment>ANDES is an intelligent tutoring system for classical Newtonian physics that was being developed by a team of researchers at the Learning Research and Development Centerat the University of Pittsburgh and researchers at the United States Naval Academy. The student model in ANDES uses a Bayesian network to do long-term knowledge assessment, plan recognition, and prediction of students&apos; actions during problem solving.\nReference:\nCristina Conati, Abigail S. Gertner, Kurt VanLehn, Marek J. Druzdzel, On-line Student Modeling for Coached Problem Solving Using Bayesian Networks, Proceedings of the Sixth International Conference on User Modeling (UM-96), Vienna, New York: Springer Verlag, 231-242, 1997</comment>
+			<node id="GOAL_2">
+				<name>GOAL_2</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 143 89 179</position>
+			</node>
+			<node id="GOAL_48">
+				<name>GOAL_48</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 187 89 223</position>
+			</node>
+			<node id="GOAL_49">
+				<name>GOAL_49</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 231 89 267</position>
+			</node>
+			<node id="GOAL_50">
+				<name>GOAL_50</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 275 89 311</position>
+			</node>
+			<node id="GOAL_53">
+				<name>GOAL_53</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 407 89 443</position>
+			</node>
+			<node id="GOAL_56">
+				<name>GOAL_56</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>105 407 181 443</position>
+			</node>
+			<node id="GOAL_57">
+				<name>GOAL_57</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 451 89 487</position>
+			</node>
+			<node id="GOAL_61">
+				<name>GOAL_61</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 583 89 619</position>
+			</node>
+			<node id="GOAL_62">
+				<name>GOAL_62</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 627 89 663</position>
+			</node>
+			<node id="GOAL_63">
+				<name>GOAL_63</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 671 89 707</position>
+			</node>
+			<node id="GOAL_66">
+				<name>GOAL_66</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>105 671 181 707</position>
+			</node>
+			<node id="GOAL_69">
+				<name>GOAL_69</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>197 671 273 707</position>
+			</node>
+			<node id="GOAL_72">
+				<name>GOAL_72</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>289 671 365 707</position>
+			</node>
+			<node id="GOAL_79">
+				<name>GOAL_79</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 803 89 839</position>
+			</node>
+			<node id="GOAL_80">
+				<name>GOAL_80</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>105 803 181 839</position>
+			</node>
+			<node id="GOAL_81">
+				<name>GOAL_81</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 891 89 927</position>
+			</node>
+			<node id="GOAL_83">
+				<name>GOAL_83</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 935 89 971</position>
+			</node>
+			<node id="GOAL_84">
+				<name>GOAL_84</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 979 89 1015</position>
+			</node>
+			<node id="GOAL_98">
+				<name>GOAL_98</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 1111 89 1147</position>
+			</node>
+			<node id="GOAL_87">
+				<name>GOAL_87</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>105 1111 181 1147</position>
+			</node>
+			<node id="GOAL_99">
+				<name>GOAL_99</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 1155 89 1191</position>
+			</node>
+			<node id="GOAL_103">
+				<name>GOAL_103</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 1243 89 1279</position>
+			</node>
+			<node id="GOAL_104">
+				<name>GOAL_104</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 1287 89 1323</position>
+			</node>
+			<node id="GOAL_107">
+				<name>GOAL_107</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 1419 89 1455</position>
+			</node>
+			<node id="GOAL_108">
+				<name>GOAL_108</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 1463 89 1499</position>
+			</node>
+			<node id="GOAL_109">
+				<name>GOAL_109</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>105 1463 181 1499</position>
+			</node>
+			<node id="GOAL65">
+				<name>GOAL_IS_RESOLVE_FORCE_VECTORS</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>105 143 181 179</position>
+			</node>
+			<node id="GOAL_110">
+				<name>GOAL_110</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 1507 89 1543</position>
+			</node>
+			<node id="GOAL66">
+				<name>GOAL_IS_RESOLVE_NET_FORCE</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>197 143 273 179</position>
+			</node>
+			<node id="GOAL_111">
+				<name>GOAL_111</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>105 1507 181 1543</position>
+			</node>
+			<node id="GOAL68">
+				<name>GOAL_IS_RESOLVE_VECTOR</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>289 143 365 179</position>
+			</node>
+			<node id="GOAL_113">
+				<name>GOAL_113</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 1551 89 1587</position>
+			</node>
+			<node id="GOAL_114">
+				<name>GOAL_114</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>105 1551 181 1587</position>
+			</node>
+			<node id="GOAL72">
+				<name>GOAL_IS_RESOLVE_ACCEL_VECTOR</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>381 143 457 179</position>
+			</node>
+			<node id="GOAL_121">
+				<name>GOAL_121</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>197 1507 273 1543</position>
+			</node>
+			<node id="GOAL_126">
+				<name>GOAL_126</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>289 1507 365 1543</position>
+			</node>
+			<node id="GOAL_127">
+				<name>GOAL_127</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>381 1507 457 1543</position>
+			</node>
+			<node id="GOAL_129">
+				<name>GOAL_129</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>197 1551 273 1587</position>
+			</node>
+			<node id="GOAL_130">
+				<name>GOAL_130</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>289 1551 365 1587</position>
+			</node>
+			<node id="GOAL_142">
+				<name>GOAL_142</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 1683 89 1719</position>
+			</node>
+			<node id="GOAL_143">
+				<name>GOAL_143</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>105 1683 181 1719</position>
+			</node>
+			<node id="GOAL_146">
+				<name>GOAL_146</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>197 1683 273 1719</position>
+			</node>
+			<node id="GOAL_147">
+				<name>GOAL_147</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 1771 89 1807</position>
+			</node>
+			<node id="GOAL_149">
+				<name>GOAL_149</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 1815 89 1851</position>
+			</node>
+			<node id="GOAL_150">
+				<name>GOAL_150</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 1859 89 1895</position>
+			</node>
+			<node id="GOAL_153">
+				<name>GOAL_153</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>473 1507 549 1543</position>
+			</node>
+			<node id="SNode_3">
+				<name>SNode_3</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>473 143 549 179</position>
+			</node>
+			<node id="SNode_4">
+				<name>SNode_4</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>565 143 641 179</position>
+			</node>
+			<node id="SNode_5">
+				<name>SNode_5</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>657 143 733 179</position>
+			</node>
+			<node id="SNode_6">
+				<name>SNode_6</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>749 143 825 179</position>
+			</node>
+			<node id="SNode_7">
+				<name>SNode_7</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>841 143 917 179</position>
+			</node>
+			<node id="SNode_8">
+				<name>SNode_8</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>105 231 181 267</position>
+			</node>
+			<node id="SNode_9">
+				<name>SNode_9</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>933 143 1009 179</position>
+			</node>
+			<node id="SNode_10">
+				<name>SNode_10</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1025 143 1101 179</position>
+			</node>
+			<node id="SNode_11">
+				<name>SNode_11</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1117 143 1193 179</position>
+			</node>
+			<node id="SNode_12">
+				<name>SNode_12</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1209 143 1285 179</position>
+			</node>
+			<node id="SNode_13">
+				<name>SNode_13</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1301 143 1377 179</position>
+			</node>
+			<node id="SNode_14">
+				<name>SNode_14</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>12 1352 88 1388</position>
+			</node>
+			<node id="SNode_15">
+				<name>SNode_15</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1393 143 1469 179</position>
+			</node>
+			<node id="SNode_16">
+				<name>SNode_16</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1485 143 1561 179</position>
+			</node>
+			<node id="SNode_17">
+				<name>SNode_17</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1577 143 1653 179</position>
+			</node>
+			<node id="SNode_19">
+				<name>SNode_19</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>12540 3692 12616 3728</position>
+			</node>
+			<node id="SNode_20">
+				<name>SNode_20</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>105 187 181 223</position>
+			</node>
+			<node id="SNode_21">
+				<name>SNode_21</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>197 231 273 267</position>
+			</node>
+			<node id="SNode_24">
+				<name>SNode_24</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>105 275 181 311</position>
+			</node>
+			<node id="SNode_25">
+				<name>SNode_25</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>197 187 273 223</position>
+			</node>
+			<node id="SNode_26">
+				<name>SNode_26</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>289 187 365 223</position>
+			</node>
+			<node id="SNode_47">
+				<name>SNode_47</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>381 187 457 223</position>
+			</node>
+			<node id="SNode_27">
+				<name>SNode_27</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>197 275 273 311</position>
+			</node>
+			<node id="SNode_51">
+				<name>SNode_51</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 319 89 355</position>
+			</node>
+			<node id="SNode_52">
+				<name>SNode_52</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 363 89 399</position>
+			</node>
+			<node id="SNode_28">
+				<name>SNode_28</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>105 451 181 487</position>
+			</node>
+			<node id="SNode_29">
+				<name>SNode_29</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 495 89 531</position>
+			</node>
+			<node id="SNode_31">
+				<name>SNode_31</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 539 89 575</position>
+			</node>
+			<node id="SNode_33">
+				<name>SNode_33</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>473 187 549 223</position>
+			</node>
+			<node id="SNode_34">
+				<name>SNode_34</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>565 187 641 223</position>
+			</node>
+			<node id="SNode_59">
+				<name>SNode_59</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>105 495 181 531</position>
+			</node>
+			<node id="SNode_60">
+				<name>SNode_60</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>105 539 181 575</position>
+			</node>
+			<node id="SNode_64">
+				<name>SNode_64</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 715 89 751</position>
+			</node>
+			<node id="SNode_41">
+				<name>SNode_41</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>657 187 733 223</position>
+			</node>
+			<node id="SNode_42">
+				<name>SNode_42</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>289 275 365 311</position>
+			</node>
+			<node id="SNode_43">
+				<name>SNode_43</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>197 451 273 487</position>
+			</node>
+			<node id="SNode_67">
+				<name>SNode_67</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>105 715 181 751</position>
+			</node>
+			<node id="SNode_54">
+				<name>SNode_54</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>289 451 365 487</position>
+			</node>
+			<node id="SNode_70">
+				<name>SNode_70</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>197 715 273 751</position>
+			</node>
+			<node id="SNode_55">
+				<name>SNode_55</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>381 451 457 487</position>
+			</node>
+			<node id="SNode_73">
+				<name>SNode_73</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>289 715 365 751</position>
+			</node>
+			<node id="SNode_74">
+				<name>SNode_74</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 759 89 795</position>
+			</node>
+			<node id="SNode_75">
+				<name>SNode_75</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>105 759 181 795</position>
+			</node>
+			<node id="SNode_86">
+				<name>SNode_86</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 1023 89 1059</position>
+			</node>
+			<node id="SNode_156">
+				<name>SNode_156</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 1067 89 1103</position>
+			</node>
+			<node id="SNode_37">
+				<name>SNode_37</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>105 1155 181 1191</position>
+			</node>
+			<node id="SNode_38">
+				<name>SNode_38</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 1199 89 1235</position>
+			</node>
+			<node id="SNode_40">
+				<name>SNode_40</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>105 1243 181 1279</position>
+			</node>
+			<node id="SNode_44">
+				<name>SNode_44</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>197 495 273 531</position>
+			</node>
+			<node id="SNode_46">
+				<name>SNode_46</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>197 539 273 575</position>
+			</node>
+			<node id="SNode_65">
+				<name>SNode_65</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>197 759 273 795</position>
+			</node>
+			<node id="SNode_68">
+				<name>SNode_68</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>289 759 365 795</position>
+			</node>
+			<node id="SNode_71">
+				<name>SNode_71</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>381 759 457 795</position>
+			</node>
+			<node id="SNode_88">
+				<name>SNode_88</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>197 1155 273 1191</position>
+			</node>
+			<node id="SNode_91">
+				<name>SNode_91</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>105 1199 181 1235</position>
+			</node>
+			<node id="SNode_92">
+				<name>SNode_92</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>289 231 365 267</position>
+			</node>
+			<node id="SNode_93">
+				<name>SNode_93</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>197 1199 273 1235</position>
+			</node>
+			<node id="SNode_94">
+				<name>SNode_94</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>289 1155 365 1191</position>
+			</node>
+			<node id="SNode_95">
+				<name>SNode_95</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>289 1199 365 1235</position>
+			</node>
+			<node id="SNode_97">
+				<name>SNode_97</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>381 1199 457 1235</position>
+			</node>
+			<node id="SNode_100">
+				<name>SNode_100</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>381 1155 457 1191</position>
+			</node>
+			<node id="SNode_102">
+				<name>SNode_102</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>473 1199 549 1235</position>
+			</node>
+			<node id="SNode_106">
+				<name>SNode_106</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 1331 89 1367</position>
+			</node>
+			<node id="SNode_152">
+				<name>SNode_152</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 1375 89 1411</position>
+			</node>
+			<node id="SNode_112">
+				<name>SNode_112</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 1595 89 1631</position>
+			</node>
+			<node id="SNode_115">
+				<name>SNode_115</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>105 1595 181 1631</position>
+			</node>
+			<node id="SNode_116">
+				<name>SNode_116</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 1639 89 1675</position>
+			</node>
+			<node id="SNode_117">
+				<name>SNode_117</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>197 1595 273 1631</position>
+			</node>
+			<node id="SNode_118">
+				<name>SNode_118</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>289 1595 365 1631</position>
+			</node>
+			<node id="SNode_119">
+				<name>SNode_119</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>105 1639 181 1675</position>
+			</node>
+			<node id="SNode_120">
+				<name>SNode_120</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>197 1639 273 1675</position>
+			</node>
+			<node id="SNode_122">
+				<name>SNode_122</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>381 1551 457 1587</position>
+			</node>
+			<node id="SNode_123">
+				<name>SNode_123</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>381 1595 457 1631</position>
+			</node>
+			<node id="SNode_124">
+				<name>SNode_124</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>289 1639 365 1675</position>
+			</node>
+			<node id="SNode_125">
+				<name>SNode_125</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>381 1639 457 1675</position>
+			</node>
+			<node id="SNode_128">
+				<name>SNode_128</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>473 1595 549 1631</position>
+			</node>
+			<node id="SNode_131">
+				<name>SNode_131</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>565 1595 641 1631</position>
+			</node>
+			<node id="SNode_132">
+				<name>SNode_132</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>473 1639 549 1675</position>
+			</node>
+			<node id="SNode_133">
+				<name>SNode_133</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>657 1595 733 1631</position>
+			</node>
+			<node id="SNode_134">
+				<name>SNode_134</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>565 1639 641 1675</position>
+			</node>
+			<node id="SNode_135">
+				<name>SNode_135</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>657 1639 733 1675</position>
+			</node>
+			<node id="SNode_154">
+				<name>SNode_154</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>473 1551 549 1587</position>
+			</node>
+			<node id="SNode_136">
+				<name>SNode_136</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>749 1639 825 1675</position>
+			</node>
+			<node id="SNode_137">
+				<name>SNode_137</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>841 1639 917 1675</position>
+			</node>
+			<node id="SNode_151">
+				<name>SNode_151</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 1903 89 1939</position>
+			</node>
+			<node id="SNode_155">
+				<name>SNode_155</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>749 1595 825 1631</position>
+			</node>
+			<node id="DISPLACEM0">
+				<name>DISPLACEMENT_DIRECTION</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1669 143 1745 179</position>
+			</node>
+			<node id="RApp1">
+				<name>RApp1</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>749 187 825 223</position>
+			</node>
+			<node id="GIVEN_1">
+				<name>GIVEN_1</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1761 143 1837 179</position>
+			</node>
+			<node id="RApp2">
+				<name>RApp2</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>841 187 917 223</position>
+			</node>
+			<node id="NEED1">
+				<name>NEED_VAR_FOR_GRAV_CONST</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1853 143 1929 179</position>
+			</node>
+			<node id="GRAV2">
+				<name>GRAV_CONSTANT_OF_EARTH</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1945 143 2021 179</position>
+			</node>
+			<node id="VALUE3">
+				<name>VALUE_KNOWN_EQN</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>2037 143 2113 179</position>
+			</node>
+			<node id="SLIDING4">
+				<name>SLIDING_CONTACT</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>2129 143 2205 179</position>
+			</node>
+			<node id="CONSTANT5">
+				<name>CONSTANT_MEANS_KNOWN</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>2221 143 2297 179</position>
+			</node>
+			<node id="KNOWN6">
+				<name>KNOWN_VECTOR_COMPO</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>2313 143 2389 179</position>
+			</node>
+			<node id="VELOCITY7">
+				<name>VELOCITY_DIRECTION</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>2405 143 2481 179</position>
+			</node>
+			<node id="RApp3">
+				<name>RApp3</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>381 231 457 267</position>
+			</node>
+			<node id="KNOWN8">
+				<name>KNOWN_NULL_VECTOR_COMPO</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>2497 143 2573 179</position>
+			</node>
+			<node id="RApp4">
+				<name>RApp4</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>933 187 1009 223</position>
+			</node>
+			<node id="COMPO16">
+				<name>COMPO_IS_MAG</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>2589 143 2665 179</position>
+			</node>
+			<node id="TRY12">
+				<name>TRY_KINEMATICS</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>2681 143 2757 179</position>
+			</node>
+			<node id="TRY11">
+				<name>TRY_KINEMATICS_FOR_VELOCITY</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1025 187 1101 223</position>
+			</node>
+			<node id="CHOOSE19">
+				<name>CHOOSE_BODY_FOR_KINE_GOAL</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>2773 143 2849 179</position>
+			</node>
+			<node id="SYSTEM18">
+				<name>SYSTEM_WITH_VELOCITY_ENDPOINT</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>2865 143 2941 179</position>
+			</node>
+			<node id="KINEMATI17">
+				<name>KINEMATICS_SYSTEM_IS_SYSTEM</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>2957 143 3033 179</position>
+			</node>
+			<node id="IDENTIFY10">
+				<name>IDENTIFY_KINEMATIC_QUANTITIES</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>3049 143 3125 179</position>
+			</node>
+			<node id="IDENTIFY9">
+				<name>IDENTIFY_INITIAL_VELOCITY_GOAL</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>3141 143 3217 179</position>
+			</node>
+			<node id="TRY13">
+				<name>TRY_KINEMATICS_FOR_ACCEL</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1117 187 1193 223</position>
+			</node>
+			<node id="TRY14">
+				<name>TRY_KINEMATICS_FOR_DURATION</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1209 187 1285 223</position>
+			</node>
+			<node id="TRY15">
+				<name>TRY_KINEMATICS_FOR_DISPLACEMENT</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1301 187 1377 223</position>
+			</node>
+			<node id="VAR20">
+				<name>VAR_DENOTES_GIVEN</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>3233 143 3309 179</position>
+			</node>
+			<node id="GIVEN21">
+				<name>GIVEN_MASS_IMPLIES_NONZERO_MASS</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>3325 143 3401 179</position>
+			</node>
+			<node id="VECTOR27">
+				<name>VECTOR_IS_EQUIV_COMPONENT</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>3417 143 3493 179</position>
+			</node>
+			<node id="APPLY32">
+				<name>APPLY_KINEMATICS</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>3509 143 3585 179</position>
+			</node>
+			<node id="CHOOSE35">
+				<name>CHOOSE_AXIS_FOR_KINEMATICS</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>3601 143 3677 179</position>
+			</node>
+			<node id="MAXIMIZE34">
+				<name>MAXIMIZE_DIRS_AXIS</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>3693 143 3769 179</position>
+			</node>
+			<node id="AXIS33">
+				<name>AXIS_CHOICE_IS_AXIS</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>3785 143 3861 179</position>
+			</node>
+			<node id="WRITE31">
+				<name>WRITE_KINEMATICS_GOAL</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>3877 143 3953 179</position>
+			</node>
+			<node id="WRITE30">
+				<name>WRITE_KINEMATICS_ALONG_AXIS</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>3969 143 4045 179</position>
+			</node>
+			<node id="RESOLVE37">
+				<name>RESOLVE_INITIAL_VELOCITY_VECTOR</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>4061 143 4137 179</position>
+			</node>
+			<node id="NEED36">
+				<name>NEED_VAR_FOR_COMPO</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>4153 143 4229 179</position>
+			</node>
+			<node id="IDENTIFY39">
+				<name>IDENTIFY_DISPLACEMENT_GOAL</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>4245 143 4321 179</position>
+			</node>
+			<node id="RESOLVE38">
+				<name>RESOLVE_DISPLACEMENT_VECTOR</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>4337 143 4413 179</position>
+			</node>
+			<node id="IDENTIFY41">
+				<name>IDENTIFY_SOUGHT_FINAL_VELOCITY</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>4429 143 4505 179</position>
+			</node>
+			<node id="RESOLVE40">
+				<name>RESOLVE_FINAL_VELOCITY_VECTOR</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>4521 143 4597 179</position>
+			</node>
+			<node id="IDENTIFY43">
+				<name>IDENTIFY_UNKNOWN_ACCEL</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>4613 143 4689 179</position>
+			</node>
+			<node id="RESOLVE42">
+				<name>RESOLVE_ACCEL_VECTOR</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>4705 143 4781 179</position>
+			</node>
+			<node id="KINE29">
+				<name>KINE_MISSING_T</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>4797 143 4873 179</position>
+			</node>
+			<node id="VECTOR44">
+				<name>VECTOR_AGAINST_AXIS</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>4889 143 4965 179</position>
+			</node>
+			<node id="EQUATION28">
+				<name>EQUATION_UNKNOWN_GOAL</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>4981 143 5057 179</position>
+			</node>
+			<node id="RApp5">
+				<name>RApp5</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 847 89 883</position>
+			</node>
+			<node id="RApp6">
+				<name>RApp6</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>105 847 181 883</position>
+			</node>
+			<node id="TRY25">
+				<name>TRY_NEWTONS</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>5073 143 5149 179</position>
+			</node>
+			<node id="TRY24">
+				<name>TRY_NEWTONS_FOR_ACCEL</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1393 187 1469 223</position>
+			</node>
+			<node id="CHOOSE47">
+				<name>CHOOSE_NEWTONS_BODY_GOAL</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>5165 143 5241 179</position>
+			</node>
+			<node id="SYSTEM46">
+				<name>SYSTEM_IS_BODY_DURING_TIME</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>5257 143 5333 179</position>
+			</node>
+			<node id="NEWTONS45">
+				<name>NEWTONS_SYSTEM_IS_SYSTEM</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>5349 143 5425 179</position>
+			</node>
+			<node id="DEFINE23">
+				<name>DEFINE_SYSTEM_PROPERTIES</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>5441 143 5517 179</position>
+			</node>
+			<node id="IDENTIFY22">
+				<name>IDENTIFY_NEWTONS_SYSTEM_MASS</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>5533 143 5609 179</position>
+			</node>
+			<node id="TRY26">
+				<name>TRY_NEWTONS_FOR_FORCE</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1485 187 1561 223</position>
+			</node>
+			<node id="NULL48">
+				<name>NULL_VECTOR_NULL_COMPONENTS</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>5625 143 5701 179</position>
+			</node>
+			<node id="FIND49">
+				<name>FIND_FORCES_FOR_NEWTONS</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>5717 143 5793 179</position>
+			</node>
+			<node id="NORMAL50">
+				<name>NORMAL_FORCE_EXISTS</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>5809 143 5885 179</position>
+			</node>
+			<node id="STRAT_90">
+				<name>STRAT_90</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>5901 143 5977 179</position>
+			</node>
+			<node id="NORMAL52">
+				<name>NORMAL_FORCE_DIRECTION</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>5993 143 6069 179</position>
+			</node>
+			<node id="INCLINE51">
+				<name>INCLINE_NORMAL_FORCE_DIRECTION</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1577 187 1653 223</position>
+			</node>
+			<node id="HORIZ53">
+				<name>HORIZ_NORMAL_FORCE_DIRECTION</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1669 187 1745 223</position>
+			</node>
+			<node id="BUGGY54">
+				<name>BUGGY_NORMAL_FORCE_DIRECTION*</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1761 187 1837 223</position>
+			</node>
+			<node id="IDENTIFY55">
+				<name>IDENTIFY_FORCE_GOAL</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>6085 143 6161 179</position>
+			</node>
+			<node id="WEIGHT56">
+				<name>WEIGHT_FORCE_EXISTS</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>6177 143 6253 179</position>
+			</node>
+			<node id="WEIGHT57">
+				<name>WEIGHT_FORCE_DIRECTION</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>6269 143 6345 179</position>
+			</node>
+			<node id="FIND58">
+				<name>FIND_SYSTEM_ACCELERATING</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>6361 143 6437 179</position>
+			</node>
+			<node id="IDENTIFY59">
+				<name>IDENTIFY_NEWTONS_SYSTEM_ACCEL</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>6453 143 6529 179</position>
+			</node>
+			<node id="FORCE60">
+				<name>FORCE_SET</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>6545 143 6621 179</position>
+			</node>
+			<node id="APPLY61">
+				<name>APPLY_NEWTONS</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>6637 143 6713 179</position>
+			</node>
+			<node id="CHOOSE62">
+				<name>CHOOSE_AXIS</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>6729 143 6805 179</position>
+			</node>
+			<node id="WRITE63">
+				<name>WRITE_NEWTONS_GOAL</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>6821 143 6897 179</position>
+			</node>
+			<node id="WRITE64">
+				<name>WRITE_NEWTONS_BOTH_DIRECTIONS</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>6913 143 6989 179</position>
+			</node>
+			<node id="NEED67">
+				<name>NEED_VAR_FOR_NET_FORCE</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>7005 143 7081 179</position>
+			</node>
+			<node id="RApp7">
+				<name>RApp7</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>565 1507 641 1543</position>
+			</node>
+			<node id="RApp8">
+				<name>RApp8</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>565 1551 641 1587</position>
+			</node>
+			<node id="VECTOR69">
+				<name>VECTOR_OFF_AXIS</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>7097 143 7173 179</position>
+			</node>
+			<node id="VECTOR70">
+				<name>VECTOR_ALONG_AXIS</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>7189 143 7265 179</position>
+			</node>
+			<node id="EQUAL71">
+				<name>EQUAL_VARS_EQUATION</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>7281 143 7357 179</position>
+			</node>
+			<node id="VECTOR73">
+				<name>VECTOR_ORTHO_AXIS</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>7373 143 7449 179</position>
+			</node>
+			<node id="NEWTONS74">
+				<name>NEWTONS_SECOND_LAW</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>7465 143 7541 179</position>
+			</node>
+			<node id="SUM75">
+				<name>SUM_OF_FORCES</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>7557 143 7633 179</position>
+			</node>
+			<node id="RApp9">
+				<name>RApp9</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>657 1507 733 1543</position>
+			</node>
+			<node id="RApp10">
+				<name>RApp10</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>657 1551 733 1587</position>
+			</node>
+			<node id="RApp11">
+				<name>RApp11</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>13 1727 89 1763</position>
+			</node>
+			<node id="RApp12">
+				<name>RApp12</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>105 1727 181 1763</position>
+			</node>
+			<node id="RApp13">
+				<name>RApp13</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>197 1727 273 1763</position>
+			</node>
+			<node id="TRY76">
+				<name>TRY_GRAV_FORCE_FOR_WEIGHT</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>7649 143 7725 179</position>
+			</node>
+			<node id="APPLY77">
+				<name>APPLY_GRAV_FORCE_LAW</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>7741 143 7817 179</position>
+			</node>
+			<node id="GRAV78">
+				<name>GRAV_FORCE_LAW</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>7833 143 7909 179</position>
+			</node>
+			<textbox>
+				<caption>ANDES is an intelligent tutoring system for classical Newtonian physics that was being developed by a team of researchers at the Learning Research and Development Centerat the University of Pittsburgh and researchers at the United States Naval Academy. The student model in ANDES uses a Bayesian network to do long-term knowledge assessment, plan recognition, and prediction of students&apos; actions during problem solving.</caption>
+				<font color="000080" name="Arial" size="12" bold="true" />
+				<position>8 10 689 105</position>
+			</textbox>
+			<textbox>
+				<caption>Reference:\nCristina Conati, Abigail S. Gertner, Kurt VanLehn, Marek J. Druzdzel, On-line Student Modeling for Coached Problem Solving Using Bayesian Networks, Proceedings of the Sixth International Conference on User Modeling (UM-96), Vienna, New York: Springer Verlag, 231-242, 1997</caption>
+				<font color="000080" name="Arial" size="12" bold="true" />
+				<position>706 10 1357 105</position>
+			</textbox>
+		</genie>
+	</extensions>
+</smile>

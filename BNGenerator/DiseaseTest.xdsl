@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<smile version="1.0" id="DiseaseTest" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="Disease">
+			<state id="absent" />
+			<state id="present" />
+			<probabilities>0.999 0.001</probabilities>
+		</cpt>
+		<cpt id="Test">
+			<state id="negative" />
+			<state id="positive" />
+			<parents>Disease</parents>
+			<probabilities>0.95 0.05 0.02 0.98</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 2.3.3520.1 1d480d954d39d00" name="Disease Test Example" faultnameformat="nodestate">
+			<comment>This simple network is useful in demonstrating the simplest possible application of Bayes theorem.\nThe thing that surprises most students is that the posterior probability of the disease after observing a positive test result is still very low (around 0.02). Most people expect a high posterior given high sensitivity and specificity of the test.\nReference:\nBayesFusion, LLC</comment>
+			<node id="Disease">
+				<name>Disease</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000080" name="Arial" size="12" />
+				<position>87 28 178 84</position>
+				<barchart active="true" width="201" height="69" />
+			</node>
+			<node id="Test">
+				<name>Test</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000080" name="Arial" size="12" />
+				<position>87 130 178 186</position>
+				<barchart active="true" width="205" height="69" />
+			</node>
+			<textbox>
+				<caption>This simple network is useful in demonstrating the simplest possible application of Bayes theorem.\nThe thing that surprises most students is that the posterior probability of the disease after observing a positive test result is still very low (around 0.02). Most people expect a high posterior given high sensitivity and specificity of the test.</caption>
+				<font color="000080" name="Arial" size="12" bold="true" />
+				<position>268 22 651 155</position>
+			</textbox>
+		</genie>
+	</extensions>
+</smile>

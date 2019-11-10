@@ -46,7 +46,7 @@ class Node:
 
 class BayesianNetwork:
     def __init__(self, filename: str):
-        nodes = ET.parse('graph1.xdsl').getroot().find('nodes')
+        nodes = ET.parse(filename).getroot().find('nodes')
         if not nodes:
             raise Exception("Invalid xdsl file")
         self.nodes = [Node(x) for x in nodes.findall('cpt')]

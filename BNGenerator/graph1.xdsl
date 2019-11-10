@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- This network was created in GeNIe Academic, which can be used for educational and research purposes only -->
+<smile version="1.0" id="Sub0" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="Earthquake">
+			<state id="T" />
+			<state id="F" />
+			<probabilities>0.02 0.98</probabilities>
+		</cpt>
+		<cpt id="Burglary">
+			<state id="T" />
+			<state id="F" />
+			<probabilities>0.01 0.99</probabilities>
+		</cpt>
+		<cpt id="Alarm">
+			<state id="T" />
+			<state id="F" />
+			<parents>Burglary Earthquake</parents>
+			<probabilities>0.95 0.05 0.9399999999999999 0.06 0.29 0.71 0.001 0.999</probabilities>
+		</cpt>
+		<cpt id="John">
+			<state id="T" />
+			<state id="F" />
+			<parents>Alarm</parents>
+			<probabilities>0.9 0.1 0.05 0.95</probabilities>
+		</cpt>
+		<cpt id="Mary">
+			<state id="T" />
+			<state id="F" />
+			<parents>Alarm</parents>
+			<probabilities>0.7 0.3 0.01 0.99</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 2.4.4601.0 ACADEMIC" name="Sub0" faultnameformat="nodestate">
+			<node id="Earthquake">
+				<name>Earthquake</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>689 115 757 157</position>
+			</node>
+			<node id="Burglary">
+				<name>Burglary</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>424 125 480 160</position>
+			</node>
+			<node id="Alarm">
+				<name>Alarm</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>547 211 595 241</position>
+			</node>
+			<node id="John">
+				<name>John</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>465 306 513 336</position>
+			</node>
+			<node id="Mary">
+				<name>Mary</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>686 321 734 351</position>
+			</node>
+		</genie>
+	</extensions>
+</smile>
