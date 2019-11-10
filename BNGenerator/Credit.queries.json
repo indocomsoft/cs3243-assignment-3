@@ -1,0 +1,7 @@
+[
+  {
+    "index": 1,
+    "given": {"CreditWorthiness": "Negative"},
+    "tofind": {"Reliability":"Unreliable"}
+  }
+]

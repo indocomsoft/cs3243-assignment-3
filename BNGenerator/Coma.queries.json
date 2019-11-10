@@ -1,0 +1,7 @@
+[
+  {
+    "index": 1,
+    "given": {"Coma":"present"},
+    "tofind": {"MetastCancer": "present"}
+  }
+]
