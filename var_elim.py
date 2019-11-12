@@ -12,10 +12,11 @@ class Factor(object):
             self.dict = other.dict.copy()
             return
         self.bn = bn
-        vars = (self.bn.dependencies[var]
-                if var in self.bn.dependencies else []) + [var]
-        free_vars = vars if not assignment else list(
-            filter(lambda var: var not in assignment, vars))
+        variables = (self.bn.dependencies[var]
+                     if var in self.bn.dependencies else []) + [var]
+        free_vars = variables if not assignment else [
+            v for v in variables if v not in assignment
+        ]
         if not free_vars:
             self.free_vars = set()
             self.dict = {
@@ -43,14 +44,14 @@ class Factor(object):
                 for k2, v2 in other.dict.iteritems():
                     new_dict[k1 | k2] = v1 * v2
         else:
-            common_vals = [self.bn.variables[v] for v in common_vars]
+            common_vals = (self.bn.variables[v] for v in common_vars)
             assignments = itertools.product(*common_vals)
             for assignment in assignments:
                 pairs = set(zip(common_vars, assignment))
-                for k1, v1 in filter(lambda kv: pairs <= kv[0],
-                                     self.dict.iteritems()):
-                    for k2, v2 in filter(lambda kv: pairs <= kv[0],
-                                         other.dict.iteritems()):
+                for k1, v1 in ((k, v) for k, v in self.dict.iteritems()
+                               if pairs <= k):
+                    for k2, v2 in ((k, v) for k, v in other.dict.iteritems()
+                                   if pairs <= k):
                         new_dict[k1 | k2] = v1 * v2
         self.dict = new_dict
         return self
@@ -60,11 +61,10 @@ class Factor(object):
         return other.eliminate(assignment_pair)
 
     def eliminate(self, assignment_pair):
-        filtered = list(
-            filter(lambda kv: assignment_pair in kv[0], self.dict.iteritems()))
+        filtered = [(k, v) for k, v in self.dict.iteritems()
+                    if assignment_pair in k]
         self.dict = dict(
-            map(lambda kv: (kv[0] - frozenset([assignment_pair]), kv[1]),
-                filtered))
+            (k - frozenset([assignment_pair]), v) for k, v in filtered)
         self.free_vars.remove(assignment_pair[0])
         return self
 
@@ -79,10 +79,9 @@ class Factor(object):
         assignment_pairs = itertools.product(
             [var],
             factors.copy().pop().bn.variables[var])
-        eliminated = map(
-            lambda pair: reduce(lambda x, y: x.pointwise(y),
-                                map(lambda f: f.eliminated(pair), factors)),
-            assignment_pairs)
+        eliminated = (reduce(lambda x, y: x.pointwise(y), (f.eliminated(pair)
+                                                           for f in factors))
+                      for pair in assignment_pairs)
         summed = reduce(lambda x, y: x.add(y), eliminated)
         return summed
 
@@ -98,24 +97,23 @@ class BayesianNetwork(object):
         self.prior_probabilities = values["prior_probabilities"]
         self.queries = queries
         self.answer = []
+        self.children = {}
+        self.memo = {}
 
     def construct(self):
-        self.children = {}
         for child, parents in self.dependencies.iteritems():
             for parent in parents:
                 if parent not in self.children:
                     self.children[parent] = set()
                 self.children[parent].add(child)
 
-        memo = {}
-        for var, values in self.conditional_probabilities.items():
+        for var, values in self.conditional_probabilities.iteritems():
             d = {}
             parents = self.dependencies[var]
             for v in values:
-                d[tuple(v[p]
-                        for p in (parents + ['own_value']))] = v['probability']
-            memo[var] = d
-        self.memo = memo
+                k = tuple(v[p] for p in parents + ['own_value'])
+                d[k] = v['probability']
+            self.memo[var] = d
 
     def infer(self):
         self.answer = []  # your code to find the answer
@@ -141,7 +139,7 @@ class BayesianNetwork(object):
                 relevant.add(v)
                 if v in self.dependencies:
                     stack.extend(self.dependencies[v])
-        free_vars = set(filter(lambda var: var not in given, relevant))
+        free_vars = set(var for var in relevant if var not in given)
         factors = set()
         added = set()
         for free_var in free_vars:
@@ -153,13 +151,12 @@ class BayesianNetwork(object):
                     added.add(var)
                     factors.add(Factor(self, var, given))
         free_vars -= tofind_vars
-        ordered = sorted(
-            free_vars,
-            key=lambda v: len(
-                filter(lambda factor: v in factor.free_vars, factors)))
+        ordered = sorted(free_vars,
+                         key=lambda v: sum(1 for factor in factors
+                                           if v in factor.free_vars))
         for free_var in ordered:
-            subset = set(
-                filter(lambda factor: free_var in factor.free_vars, factors))
+            subset = set(factor for factor in factors
+                         if free_var in factor.free_vars)
             factors -= subset
             summed = Factor.sum_out(free_var, subset)
             factors.add(summed)
@@ -172,7 +169,7 @@ class BayesianNetwork(object):
         if var in self.prior_probabilities:
             return self.prior_probabilities[var][assignments[var]]
         parents = self.dependencies[var]
-        key = tuple(assignments[p] for p in (parents + [var]))
+        key = tuple(assignments[p] for p in parents + [var])
         return self.memo[var][key]
 
     # You may add more classes/functions if you think is useful. However,
