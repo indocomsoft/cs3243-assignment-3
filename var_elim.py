@@ -65,7 +65,7 @@ class Factor(object):
     @staticmethod
     def sum_out(var, factors):
         # var must be in free_vars of all factors
-        assignment_pairs = list(itertools.product([var], factors.copy().pop().bn.variables[var]))
+        assignment_pairs = itertools.product([var], factors.copy().pop().bn.variables[var])
         eliminated = map(lambda pair: reduce(lambda x, y: x.pointwise(y), map(lambda f: f.eliminated(pair), factors)), assignment_pairs)
         summed = reduce(lambda x, y: x.add(y), eliminated)
         return summed
@@ -137,7 +137,8 @@ class BayesianNetwork(object):
                     added.add(var)
                     factors.add(Factor(self, var, given))
         free_vars -= tofind_vars
-        for free_var in free_vars:
+        ordered = sorted(free_vars, key=lambda v: len(filter(lambda factor: v in factor.free_vars, factors)))
+        for free_var in ordered:
             subset = set(filter(lambda factor: free_var in factor.free_vars, factors))
             factors -= subset
             summed = Factor.sum_out(free_var, subset)
