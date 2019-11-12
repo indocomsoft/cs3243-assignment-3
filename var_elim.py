@@ -61,10 +61,10 @@ class Factor(object):
         return other.eliminate(assignment_pair)
 
     def eliminate(self, assignment_pair):
+        pair_set = frozenset([assignment_pair])
         filtered = [(k, v) for k, v in self.dict.iteritems()
                     if assignment_pair in k]
-        self.dict = dict(
-            (k - frozenset([assignment_pair]), v) for k, v in filtered)
+        self.dict = dict((k - pair_set, v) for k, v in filtered)
         self.free_vars.remove(assignment_pair[0])
         return self
 
