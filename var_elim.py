@@ -78,7 +78,7 @@ class Factor(object):
         # var must be in free_vars of all factors
         assignment_pairs = itertools.product(
             [var],
-            factors.copy().pop().bn.variables[var])
+            iter(factors).next().bn.variables[var])
         eliminated = (reduce(lambda x, y: x.pointwise(y), (f.eliminated(pair)
                                                            for f in factors))
                       for pair in assignment_pairs)
