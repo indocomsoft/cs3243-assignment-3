@@ -1,7 +1,8 @@
 import sys
 import json
 import itertools
-from collections import defaultdict, deque
+from collections import deque
+
 
 class Factor(object):
     def __init__(self, bn, var, assignment, other=None):
@@ -11,22 +12,27 @@ class Factor(object):
             self.dict = other.dict.copy()
             return
         self.bn = bn
-        vars = (self.bn.dependencies[var] if var in self.bn.dependencies else []) + [var]
-        free_vars = vars if not assignment else list(filter(lambda var: var not in assignment, vars))
+        vars = (self.bn.dependencies[var]
+                if var in self.bn.dependencies else []) + [var]
+        free_vars = vars if not assignment else list(
+            filter(lambda var: var not in assignment, vars))
         if not free_vars:
             self.free_vars = set()
-            self.dict = {frozenset(): self.bn.cond_probability(var, assignment)}
+            self.dict = {
+                frozenset(): self.bn.cond_probability(var, assignment)
+            }
             return
         self.free_vars = set(free_vars)
         self.dict = {}
         free_vals = [self.bn.variables[v] for v in free_vars]
-        free_assignments = list(
-            itertools.product(*(free_vals)))
+        free_assignments = list(itertools.product(*(free_vals)))
         for free_assignment in free_assignments:
             free_assignment = dict(zip(free_vars, free_assignment))
             all_assignments = free_assignment.copy()
             all_assignments.update(assignment)
-            self.dict[frozenset(free_assignment.iteritems())] = self.bn.cond_probability(var, all_assignments)
+            self.dict[frozenset(
+                free_assignment.iteritems())] = self.bn.cond_probability(
+                    var, all_assignments)
 
     def pointwise(self, other):
         common_vars = list(self.free_vars & other.free_vars)
@@ -41,8 +47,10 @@ class Factor(object):
             assignments = itertools.product(*common_vals)
             for assignment in assignments:
                 pairs = set(zip(common_vars, assignment))
-                for k1, v1 in filter(lambda kv: pairs <= kv[0], self.dict.iteritems()):
-                    for k2, v2 in filter(lambda kv: pairs <= kv[0], other.dict.iteritems()):
+                for k1, v1 in filter(lambda kv: pairs <= kv[0],
+                                     self.dict.iteritems()):
+                    for k2, v2 in filter(lambda kv: pairs <= kv[0],
+                                         other.dict.iteritems()):
                         new_dict[k1 | k2] = v1 * v2
         self.dict = new_dict
         return self
@@ -52,8 +60,11 @@ class Factor(object):
         return other.eliminate(assignment_pair)
 
     def eliminate(self, assignment_pair):
-        filtered = list(filter(lambda kv: assignment_pair in kv[0], self.dict.iteritems()))
-        self.dict = dict(map(lambda kv: (kv[0] - frozenset([assignment_pair]), kv[1]), filtered))
+        filtered = list(
+            filter(lambda kv: assignment_pair in kv[0], self.dict.iteritems()))
+        self.dict = dict(
+            map(lambda kv: (kv[0] - frozenset([assignment_pair]), kv[1]),
+                filtered))
         self.free_vars.remove(assignment_pair[0])
         return self
 
@@ -65,13 +76,18 @@ class Factor(object):
     @staticmethod
     def sum_out(var, factors):
         # var must be in free_vars of all factors
-        assignment_pairs = itertools.product([var], factors.copy().pop().bn.variables[var])
-        eliminated = map(lambda pair: reduce(lambda x, y: x.pointwise(y), map(lambda f: f.eliminated(pair), factors)), assignment_pairs)
+        assignment_pairs = itertools.product(
+            [var],
+            factors.copy().pop().bn.variables[var])
+        eliminated = map(
+            lambda pair: reduce(lambda x, y: x.pointwise(y),
+                                map(lambda f: f.eliminated(pair), factors)),
+            assignment_pairs)
         summed = reduce(lambda x, y: x.add(y), eliminated)
         return summed
 
     def copy(self):
-      return Factor(None, None, None, self)
+        return Factor(None, None, None, self)
 
 
 class BayesianNetwork(object):
@@ -137,9 +153,13 @@ class BayesianNetwork(object):
                     added.add(var)
                     factors.add(Factor(self, var, given))
         free_vars -= tofind_vars
-        ordered = sorted(free_vars, key=lambda v: len(filter(lambda factor: v in factor.free_vars, factors)))
+        ordered = sorted(
+            free_vars,
+            key=lambda v: len(
+                filter(lambda factor: v in factor.free_vars, factors)))
         for free_var in ordered:
-            subset = set(filter(lambda factor: free_var in factor.free_vars, factors))
+            subset = set(
+                filter(lambda factor: free_var in factor.free_vars, factors))
             factors -= subset
             summed = Factor.sum_out(free_var, subset)
             factors.add(summed)
