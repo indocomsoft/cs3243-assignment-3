@@ -1,7 +1,92 @@
 import sys
 import json
 import itertools
-from collections import defaultdict
+from collections import deque
+
+
+class Factor(object):
+    def __init__(self, bn, var, assignment, other=None):
+        if other:
+            self.bn = other.bn
+            self.free_vars = other.free_vars.copy()
+            self.dict = other.dict.copy()
+            return
+        self.bn = bn
+        variables = (self.bn.dependencies[var]
+                     if var in self.bn.dependencies else []) + [var]
+        free_vars = variables if not assignment else [
+            v for v in variables if v not in assignment
+        ]
+        if not free_vars:
+            self.free_vars = set()
+            self.dict = {
+                frozenset(): self.bn.cond_probability(var, assignment)
+            }
+            return
+        self.free_vars = set(free_vars)
+        self.dict = {}
+        free_vals = [self.bn.variables[v] for v in free_vars]
+        free_assignments = list(itertools.product(*(free_vals)))
+        for free_assignment in free_assignments:
+            free_assignment = dict(zip(free_vars, free_assignment))
+            all_assignments = free_assignment.copy()
+            all_assignments.update(assignment)
+            self.dict[frozenset(
+                free_assignment.iteritems())] = self.bn.cond_probability(
+                    var, all_assignments)
+
+    def pointwise(self, other):
+        common_vars = list(self.free_vars & other.free_vars)
+        self.free_vars = self.free_vars | other.free_vars
+        new_dict = {}
+        if not common_vars:
+            for k1, v1 in self.dict.iteritems():
+                for k2, v2 in other.dict.iteritems():
+                    new_dict[k1 | k2] = v1 * v2
+        else:
+            common_vals = (self.bn.variables[v] for v in common_vars)
+            assignments = itertools.product(*common_vals)
+            for assignment in assignments:
+                pairs = set(zip(common_vars, assignment))
+                for k1, v1 in ((k, v) for k, v in self.dict.iteritems()
+                               if pairs <= k):
+                    for k2, v2 in ((k, v) for k, v in other.dict.iteritems()
+                                   if pairs <= k):
+                        new_dict[k1 | k2] = v1 * v2
+        self.dict = new_dict
+        return self
+
+    def eliminated(self, assignment_pair):
+        other = self.copy()
+        return other.eliminate(assignment_pair)
+
+    def eliminate(self, assignment_pair):
+        pair_set = frozenset([assignment_pair])
+        filtered = [(k, v) for k, v in self.dict.iteritems()
+                    if assignment_pair in k]
+        self.dict = dict((k - pair_set, v) for k, v in filtered)
+        self.free_vars.remove(assignment_pair[0])
+        return self
+
+    def add(self, other):
+        for k in self.dict.iterkeys():
+            self.dict[k] += other.dict[k]
+        return self
+
+    @staticmethod
+    def sum_out(var, factors):
+        # var must be in free_vars of all factors
+        assignment_pairs = itertools.product(
+            [var],
+            iter(factors).next().bn.variables[var])
+        eliminated = (reduce(lambda x, y: x.pointwise(y), (f.eliminated(pair)
+                                                           for f in factors))
+                      for pair in assignment_pairs)
+        summed = reduce(lambda x, y: x.add(y), eliminated)
+        return summed
+
+    def copy(self):
+        return Factor(None, None, None, self)
 
 
 class BayesianNetwork(object):
@@ -12,33 +97,23 @@ class BayesianNetwork(object):
         self.prior_probabilities = values["prior_probabilities"]
         self.queries = queries
         self.answer = []
+        self.children = {}
+        self.memo = {}
 
     def construct(self):
-        forward = defaultdict(list)
-        for dest, sources in self.dependencies.items():
-            for source in sources:
-                forward[source].append(dest)
-        backward = dict((k, v[:]) for k, v in self.dependencies.items())
-        lst = []
-        s = set(self.variables.keys()) - set(self.dependencies.keys())
-        while s:
-            n = s.pop()
-            lst.append(n)
-            for m in forward[n]:
-                backward[m].remove(n)
-                if not backward[m]:
-                    s.add(m)
-        self.toposorted = lst[::-1]
+        for child, parents in self.dependencies.iteritems():
+            for parent in parents:
+                if parent not in self.children:
+                    self.children[parent] = set()
+                self.children[parent].add(child)
 
-        memo = {}
-        for var, values in self.conditional_probabilities.items():
+        for var, values in self.conditional_probabilities.iteritems():
             d = {}
             parents = self.dependencies[var]
             for v in values:
-                d[tuple(v[p]
-                        for p in (parents + ['own_value']))] = v['probability']
-            memo[var] = d
-        self.memo = memo
+                k = tuple(v[p] for p in parents + ['own_value'])
+                d[k] = v['probability']
+            self.memo[var] = d
 
     def infer(self):
         self.answer = []  # your code to find the answer
@@ -47,56 +122,54 @@ class BayesianNetwork(object):
                 "index":
                 query["index"],
                 "answer":
-                self.enumeration_ask(query["tofind"], query["given"])
+                self.elimination_ask(query["tofind"], query["given"])
             })
         return self.answer
 
-    def enumeration_ask(self, tofind, given):
-        tofind_vars = list(tofind.keys())
-        assignments = list(
-            itertools.product(*(self.variables[var] for var in tofind_vars)))
-        q = []
-        for assignment in assignments:
-            all_assignments = dict(zip(tofind_vars, assignment))
-            all_assignments.update(given)
-            q.append(self.enumerate_all(self.toposorted[:], all_assignments))
-
-        alpha = sum(q)
-        q = [x / alpha for x in q]
-
-        correct_assignment = tuple(tofind[var] for var in tofind_vars)
-
-        for (assignment, result) in zip(assignments, q):
-            if assignment == correct_assignment:
-                return result
-
-    # assignments: Dict[string, string]
-    def enumerate_all(self, vars, assignments):
-        """
-        This function MUTATES vars
-        """
-        if not vars:
-            return 1.0
-        y = vars.pop()
-        if y in assignments:
-            return self.cond_probability(y, assignments) * self.enumerate_all(
-                vars[:], assignments)
-        else:
-
-            def f(val):
-                new_assignments = assignments.copy()
-                new_assignments[y] = val
-                return self.cond_probability(
-                    y, new_assignments) * self.enumerate_all(
-                        vars[:], new_assignments)
-
-            return sum(f(val) for val in self.variables[y])
+    def elimination_ask(self, tofind, given):
+        # Get relevant variables
+        tofind_vars = set(tofind.iterkeys())
+        relevant = set()
+        for var in itertools.chain(tofind.iterkeys(), given.iterkeys()):
+            stack = deque([var])
+            while stack:
+                v = stack.pop()
+                if v in relevant:
+                    continue
+                relevant.add(v)
+                if v in self.dependencies:
+                    stack.extend(self.dependencies[v])
+        free_vars = set(var for var in relevant if var not in given)
+        factors = set()
+        added = set()
+        for free_var in free_vars:
+            to_add = [free_var]
+            if free_var in self.children:
+                to_add = itertools.chain(to_add, self.children[free_var])
+            for var in to_add:
+                if var in relevant and var not in added:
+                    added.add(var)
+                    factors.add(Factor(self, var, given))
+        free_vars -= tofind_vars
+        ordered = sorted(free_vars,
+                         key=lambda v: sum(1 for factor in factors
+                                           if v in factor.free_vars))
+        for free_var in ordered:
+            subset = set(factor for factor in factors
+                         if free_var in factor.free_vars)
+            factors -= subset
+            summed = Factor.sum_out(free_var, subset)
+            factors.add(summed)
+        final_factor = reduce(lambda x, y: x.pointwise(y), factors)
+        alpha = sum(final_factor.dict.itervalues())
+        desired = final_factor.dict[frozenset(tofind.iteritems())]
+        return desired / alpha
 
     def cond_probability(self, var, assignments):
         if var in self.prior_probabilities:
             return self.prior_probabilities[var][assignments[var]]
         parents = self.dependencies[var]
-        key = tuple(assignments[p] for p in (parents + [var]))
+        key = tuple(assignments[p] for p in parents + [var])
         return self.memo[var][key]
 
     # You may add more classes/functions if you think is useful. However,
