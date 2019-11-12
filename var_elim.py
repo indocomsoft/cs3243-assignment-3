@@ -114,7 +114,7 @@ class BayesianNetwork(object):
 
     def elimination_ask(self, tofind, given):
         # Get relevant variables
-        tofind_var = next(tofind.iterkeys())
+        tofind_vars = set(tofind.iterkeys())
         relevant = set()
         for var in itertools.chain(tofind.iterkeys(), given.iterkeys()):
             stack = deque([var])
@@ -136,7 +136,7 @@ class BayesianNetwork(object):
                 if var in relevant and var not in added:
                     added.add(var)
                     factors.add(Factor(self, var, given))
-        free_vars.remove(tofind_var)
+        free_vars -= tofind_vars
         for free_var in free_vars:
             subset = set(filter(lambda factor: free_var in factor.free_vars, factors))
             factors -= subset
@@ -144,7 +144,7 @@ class BayesianNetwork(object):
             factors.add(summed)
         final_factor = reduce(lambda x, y: x.pointwise(y), factors)
         alpha = sum(final_factor.dict.itervalues())
-        desired = final_factor.dict[frozenset([next(tofind.iteritems())])]
+        desired = final_factor.dict[frozenset(tofind.iteritems())]
         return desired / alpha
 
     def cond_probability(self, var, assignments):
