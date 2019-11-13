@@ -116,7 +116,6 @@ class BayesianNetwork(object):
             self.memo[var] = d
 
     def infer(self):
-        self.answer = []  # your code to find the answer
         for query in self.queries:
             self.answer.append({
                 "index":
