@@ -5,13 +5,16 @@ from collections import deque
 
 
 class Factor(object):
-    def __init__(self, bn, var, assignment, other=None):
-        if other:
+    def __init__(self, **kwargs):
+        if 'copy' in kwargs:
+            other = kwargs['copy']
             self.bn = other.bn
             self.free_vars = other.free_vars.copy()
             self.dict = other.dict.copy()
             return
-        self.bn = bn
+        self.bn = kwargs['bn']
+        var = kwargs['var']
+        assignment = kwargs['assignment']
         variables = (self.bn.dependencies[var]
                      if var in self.bn.dependencies else []) + [var]
         free_vars = variables if not assignment else [
@@ -86,7 +89,7 @@ class Factor(object):
         return summed
 
     def copy(self):
-        return Factor(None, None, None, self)
+        return Factor(copy=self)
 
 
 class BayesianNetwork(object):
@@ -148,7 +151,7 @@ class BayesianNetwork(object):
             for var in to_add:
                 if var in relevant and var not in added:
                     added.add(var)
-                    factors.add(Factor(self, var, given))
+                    factors.add(Factor(bn=self, var=var, assignment=given))
         free_vars -= tofind_vars
         ordered = sorted(free_vars,
                          key=lambda v: sum(1 for factor in factors
