@@ -207,8 +207,6 @@ Usage: python b_net_A3_xx.py structure.json values.json queries.json
     b_network.construct()
     answers = b_network.infer()
 
-    print(answers)
-
 
 if __name__ == "__main__":
     main()
